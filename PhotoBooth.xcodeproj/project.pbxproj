@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4789BCFC0739DFA808F8A38A /* Pods_PhotoBooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E7526D03876848EDE3C62B /* Pods_PhotoBooth.framework */; };
+		7ABB46F91DAF6BB500E57A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB46F81DAF6BB500E57A80 /* AppDelegate.swift */; };
+		7ABB46FB1DAF6BB500E57A80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB46FA1DAF6BB500E57A80 /* ViewController.swift */; };
+		7ABB46FE1DAF6BB500E57A80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB46FC1DAF6BB500E57A80 /* Main.storyboard */; };
+		7ABB47001DAF6BB500E57A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB46FF1DAF6BB500E57A80 /* Assets.xcassets */; };
+		7ABB47031DAF6BB500E57A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB47011DAF6BB500E57A80 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		017C6C091B937D3D25E503EA /* Pods-PhotoBooth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBooth.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth.release.xcconfig"; sourceTree = "<group>"; };
+		40E7526D03876848EDE3C62B /* Pods_PhotoBooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoBooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D57E62FD13A62FC6CEF2DA5 /* Pods-PhotoBooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBooth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth.debug.xcconfig"; sourceTree = "<group>"; };
+		7A69966F1DAF8B2C00E71CA3 /* PhotoBooth-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PhotoBooth-Bridging.h"; path = "PhotoBooth/PhotoBooth-Bridging.h"; sourceTree = SOURCE_ROOT; };
+		7ABB46F51DAF6BB500E57A80 /* PhotoBooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ABB46F81DAF6BB500E57A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7ABB46FA1DAF6BB500E57A80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7ABB46FD1DAF6BB500E57A80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7ABB46FF1DAF6BB500E57A80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7ABB47021DAF6BB500E57A80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7ABB47041DAF6BB500E57A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7ABB46F21DAF6BB500E57A80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4789BCFC0739DFA808F8A38A /* Pods_PhotoBooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7ABB46EC1DAF6BB500E57A80 = {
+			isa = PBXGroup;
+			children = (
+				7ABB46F71DAF6BB500E57A80 /* PhotoBooth */,
+				7ABB46F61DAF6BB500E57A80 /* Products */,
+				F8490C6DA5EEF9D42D09BCDD /* Pods */,
+				EF5FD2EE839A158881DBC01C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7ABB46F61DAF6BB500E57A80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7ABB46F51DAF6BB500E57A80 /* PhotoBooth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7ABB46F71DAF6BB500E57A80 /* PhotoBooth */ = {
+			isa = PBXGroup;
+			children = (
+				7ABB46F81DAF6BB500E57A80 /* AppDelegate.swift */,
+				7ABB46FA1DAF6BB500E57A80 /* ViewController.swift */,
+				7ABB46FC1DAF6BB500E57A80 /* Main.storyboard */,
+				7ABB46FF1DAF6BB500E57A80 /* Assets.xcassets */,
+				7ABB47011DAF6BB500E57A80 /* LaunchScreen.storyboard */,
+				7ABB47041DAF6BB500E57A80 /* Info.plist */,
+				7A69966F1DAF8B2C00E71CA3 /* PhotoBooth-Bridging.h */,
+			);
+			path = PhotoBooth;
+			sourceTree = "<group>";
+		};
+		EF5FD2EE839A158881DBC01C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40E7526D03876848EDE3C62B /* Pods_PhotoBooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8490C6DA5EEF9D42D09BCDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D57E62FD13A62FC6CEF2DA5 /* Pods-PhotoBooth.debug.xcconfig */,
+				017C6C091B937D3D25E503EA /* Pods-PhotoBooth.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7ABB46F41DAF6BB500E57A80 /* PhotoBooth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ABB47071DAF6BB500E57A80 /* Build configuration list for PBXNativeTarget "PhotoBooth" */;
+			buildPhases = (
+				872E25A0D710EFCFA9EC5F96 /* [CP] Check Pods Manifest.lock */,
+				7ABB46F11DAF6BB500E57A80 /* Sources */,
+				7ABB46F21DAF6BB500E57A80 /* Frameworks */,
+				7ABB46F31DAF6BB500E57A80 /* Resources */,
+				54F98CD24A3F627AC4C5A233 /* [CP] Embed Pods Frameworks */,
+				CFC07A47D931B3B765B0F0C6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoBooth;
+			productName = PhotoBooth;
+			productReference = 7ABB46F51DAF6BB500E57A80 /* PhotoBooth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7ABB46ED1DAF6BB500E57A80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Wasupol Tungsakultong";
+				TargetAttributes = {
+					7ABB46F41DAF6BB500E57A80 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9U7GB28537;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7ABB46F01DAF6BB500E57A80 /* Build configuration list for PBXProject "PhotoBooth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7ABB46EC1DAF6BB500E57A80;
+			productRefGroup = 7ABB46F61DAF6BB500E57A80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7ABB46F41DAF6BB500E57A80 /* PhotoBooth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7ABB46F31DAF6BB500E57A80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ABB47031DAF6BB500E57A80 /* LaunchScreen.storyboard in Resources */,
+				7ABB47001DAF6BB500E57A80 /* Assets.xcassets in Resources */,
+				7ABB46FE1DAF6BB500E57A80 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54F98CD24A3F627AC4C5A233 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		872E25A0D710EFCFA9EC5F96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CFC07A47D931B3B765B0F0C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7ABB46F11DAF6BB500E57A80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ABB46FB1DAF6BB500E57A80 /* ViewController.swift in Sources */,
+				7ABB46F91DAF6BB500E57A80 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7ABB46FC1DAF6BB500E57A80 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ABB46FD1DAF6BB500E57A80 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7ABB47011DAF6BB500E57A80 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ABB47021DAF6BB500E57A80 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7ABB47051DAF6BB500E57A80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7ABB47061DAF6BB500E57A80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7ABB47081DAF6BB500E57A80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D57E62FD13A62FC6CEF2DA5 /* Pods-PhotoBooth.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9U7GB28537;
+				INFOPLIST_FILE = PhotoBooth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = co.uniqorn.PhotoBooth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoBooth/PhotoBooth-Bridging.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7ABB47091DAF6BB500E57A80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 017C6C091B937D3D25E503EA /* Pods-PhotoBooth.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9U7GB28537;
+				INFOPLIST_FILE = PhotoBooth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = co.uniqorn.PhotoBooth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoBooth/PhotoBooth-Bridging.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7ABB46F01DAF6BB500E57A80 /* Build configuration list for PBXProject "PhotoBooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ABB47051DAF6BB500E57A80 /* Debug */,
+				7ABB47061DAF6BB500E57A80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ABB47071DAF6BB500E57A80 /* Build configuration list for PBXNativeTarget "PhotoBooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ABB47081DAF6BB500E57A80 /* Debug */,
+				7ABB47091DAF6BB500E57A80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7ABB46ED1DAF6BB500E57A80 /* Project object */;
+}
