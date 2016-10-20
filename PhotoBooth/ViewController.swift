@@ -9,6 +9,7 @@
 import UIKit
 import LLSimpleCamera
 import AVFoundation
+import Photos
 
 class ViewController: UIViewController {
 
@@ -106,8 +107,16 @@ class ViewController: UIViewController {
                     } else {
                         // 5 images upload and reset
                         self.saveImageToPhotosAlbum()
-                        self.removeAllImages()
-                        self.resetUICamera()
+                        var settings = RenderSettings()
+                        let firstImage = self.imageToUploads.first!
+                        settings.width = firstImage.size.width
+                        settings.height = firstImage.size.height
+                        settings.fps = 2
+                        let imageAnimator = ImageAnimator(renderSettings: settings, images: self.imageToUploads)
+                        imageAnimator.render() {
+                            self.removeAllImages()
+                            self.resetUICamera()
+                        }
                     }
                 }
             }
