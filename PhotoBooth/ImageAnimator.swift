@@ -72,7 +72,7 @@ class ImageAnimator {
     func loadImages(phImage: [PHImage]) -> [UIImage] {
         var images = [UIImage]()
         for index in 0...phImage.count-1 {
-            images.append(phImage[index].originalImage)
+            images.append(phImage[index].adjustedImage)
         }
         return images
     }

@@ -110,8 +110,8 @@ class ViewController: UIViewController {
                         self.saveImageToPhotosAlbum()
                         var settings = RenderSettings()
                         let firstImage = self.imageToUploads.first!
-                        settings.width = firstImage.originalImage.size.width
-                        settings.height = firstImage.originalImage.size.height
+                        settings.width = firstImage.adjustedImage.size.width
+                        settings.height = firstImage.adjustedImage.size.height
                         settings.fps = 1
                         let imageAnimator = ImageAnimator(renderSettings: settings, images: self.imageToUploads)
                         imageAnimator.render() {
