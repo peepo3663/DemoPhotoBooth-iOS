@@ -24,5 +24,10 @@ class PHImage {
     
     private func processAdjustedImage() {
         //TODO add watermark
+        self.fixrotation()
+    }
+
+    private func fixrotation() {
+        self.adjustedImage = UIImage(cgImage: self.originalImage.cgImage!, scale: self.originalImage.scale, orientation: UIImageOrientation.up)
     }
 }
