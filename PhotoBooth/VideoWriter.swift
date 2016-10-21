@@ -49,9 +49,10 @@ class VideoWriter {
         
         let x = newSize.width < size.width ? (size.width - newSize.width) / 2 : 0
         let y = newSize.height < size.height ? (size.height - newSize.height) / 2 : 0
+        let drawRect = CGRect(x: x, y: y, width: newSize.width, height: newSize.height)
         
-        context.concatenate(CGAffineTransform(rotationAngle: 0))
-        context.draw(image.cgImage!, in: CGRect(x: x, y: y, width: newSize.width, height: newSize.height))
+        //draw
+        context.draw(image.cgImage!, in: drawRect)
         
         CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
         
