@@ -43,17 +43,17 @@ class ImageAnimator {
         }
     }
     
-    init(renderSettings: RenderSettings, images:[UIImage]) {
+    init(renderSettings: RenderSettings, images:[PHImage]) {
         settings = renderSettings
         videoWriter = VideoWriter(renderSettings: settings)
-        self.images = images
+        self.images = loadImages(phImage: images)
     }
     
-    init(renderSettings: RenderSettings) {
-        settings = renderSettings
-        videoWriter = VideoWriter(renderSettings: settings)
-        images = loadImages()
-    }
+//    init(renderSettings: RenderSettings) {
+//        settings = renderSettings
+//        videoWriter = VideoWriter(renderSettings: settings)
+//        images = loadImages()
+//    }
     
     func render(completion: @escaping ()->Void) {
         
@@ -69,11 +69,10 @@ class ImageAnimator {
     }
     
     // Replace this logic with your own.
-    func loadImages() -> [UIImage] {
+    func loadImages(phImage: [PHImage]) -> [UIImage] {
         var images = [UIImage]()
-        for index in 1...10 {
-            let filename = "\(index).jpg"
-            images.append(UIImage(named: filename)!)
+        for index in 0...phImage.count-1 {
+            images.append(phImage[index].originalImage)
         }
         return images
     }

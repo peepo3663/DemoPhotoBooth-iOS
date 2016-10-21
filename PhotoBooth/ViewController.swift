@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     private var previewViewController: LLSimpleCamera?
     private var myTimer: Timer?
     private var time = 5
-    private var imageToUploads: [UIImage] = []
+    private var imageToUploads: [PHImage] = []
     
     deinit {
         myTimer?.invalidate()
@@ -96,7 +96,8 @@ class ViewController: UIViewController {
             } else {
                 //no error
                 if let imageRaw = image {
-                    self.imageToUploads.append(imageRaw)
+                    let phImage = PHImage(image: imageRaw)
+                    self.imageToUploads.append(phImage)
                     if self.imageToUploads.count < 5 {
                         // continue
                         self.time = 5
@@ -109,9 +110,9 @@ class ViewController: UIViewController {
                         self.saveImageToPhotosAlbum()
                         var settings = RenderSettings()
                         let firstImage = self.imageToUploads.first!
-                        settings.width = firstImage.size.width
-                        settings.height = firstImage.size.height
-                        settings.fps = 2
+                        settings.width = firstImage.originalImage.size.width
+                        settings.height = firstImage.originalImage.size.height
+                        settings.fps = 1
                         let imageAnimator = ImageAnimator(renderSettings: settings, images: self.imageToUploads)
                         imageAnimator.render() {
                             self.removeAllImages()
@@ -125,7 +126,7 @@ class ViewController: UIViewController {
     
     func saveImageToPhotosAlbum() {
         for imageCapture in imageToUploads {
-            UIImageWriteToSavedPhotosAlbum(imageCapture, self, #selector(saveImage(_:didFinishSavingWithError:contextInfo:)), nil)
+            UIImageWriteToSavedPhotosAlbum(imageCapture.originalImage, self, #selector(saveImage(_:didFinishSavingWithError:contextInfo:)), nil)
         }
     }
     

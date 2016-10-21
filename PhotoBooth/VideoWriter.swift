@@ -49,8 +49,10 @@ class VideoWriter {
         
         let x = newSize.width < size.width ? (size.width - newSize.width) / 2 : 0
         let y = newSize.height < size.height ? (size.height - newSize.height) / 2 : 0
+        
         context.concatenate(CGAffineTransform(rotationAngle: 0))
         context.draw(image.cgImage!, in: CGRect(x: x, y: y, width: newSize.width, height: newSize.height))
+        
         CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
         
         return pixelBuffer
@@ -95,8 +97,7 @@ class VideoWriter {
         
         if videoWriter.canAdd(videoWriterInput) {
             videoWriter.add(videoWriterInput)
-        }
-        else {
+        } else {
             fatalError("canAddInput() returned false")
         }
         
