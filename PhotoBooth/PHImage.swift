@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class PHImage {
+    var originalImage: UIImage!
+    var adjustedImage: UIImage!
+    
+    deinit {
+        self.originalImage = nil
+        self.adjustedImage = nil
+    }
+    
+    init(image: UIImage) {
+        self.originalImage = image
+        self.processAdjustedImage()
+    }
+    
+    private func processAdjustedImage() {
+        //TODO add watermark
+    }
+}
