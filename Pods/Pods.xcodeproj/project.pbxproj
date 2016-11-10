@@ -1,1314 +1,1050 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>00A4B64B4C19095B136A6E9E42C9E93A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5FE2988B7D2C73AF24954F73F8EC6FB8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>034014829C1E4434983CF3A690C12017</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>POD_CONFIGURATION_DEBUG=1</string>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>1030DC4EE67FE81F426349548536957E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>96A99E1ED6492F91E6807B16994861C5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>15B9CD02BD82F5C6A061FD034982C0CD</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2829F7538BB6966B5A7BC05BD71427C4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1ACB1C94C9418AE74987946412FA9259</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C5973AC134D6F71690ECA59308569EB2</string>
-				<string>74DA47E09287612C606D754AC220854E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>23DA8122240492904C6FA7A2B5BF27BE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>AD9AA7426C89B6E67E2830C8780E5C23</string>
-				<string>61742D8152D6CCC68412CCD3C79A266D</string>
-				<string>EE9C4A1FC1172B618F5960942DCC7E73</string>
-				<string>4ED265AD321E6774CD7856564300AEFC</string>
-				<string>3EB143E0765B37DAE26ED9B78D00F2F0</string>
-				<string>5FE2988B7D2C73AF24954F73F8EC6FB8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/LLSimpleCamera</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2829F7538BB6966B5A7BC05BD71427C4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>68B3857B1BF45AD91132D57840329D69</string>
-				<string>7536353B603EBD97B2279C1C0FC7CCF1</string>
-				<string>9282D04F65FDB5FCB444B15A12BB2C3F</string>
-				<string>9299A1B7D06CCF624A074C1E3C90659E</string>
-				<string>6FE8409E6DC876F054300E1FFB4279D6</string>
-				<string>C5EB308E9C7823004375A70D12394847</string>
-				<string>23DA8122240492904C6FA7A2B5BF27BE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>LLSimpleCamera</string>
-			<key>path</key>
-			<string>LLSimpleCamera</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>283836EF5A0AA5CDF757AD35B494F1FA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>AVFoundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>29F508EE5D4CE29EB690BA9C34A54595</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>1ACB1C94C9418AE74987946412FA9259</string>
-			<key>buildPhases</key>
-			<array>
-				<string>6F0284A77C825D318E2A79ED1AD023A4</string>
-				<string>E5FB42C0BC216C1407FF2318C4DB15C2</string>
-				<string>618692DC41F85653F8930F86CF95949B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>LLSimpleCamera</string>
-			<key>productName</key>
-			<string>LLSimpleCamera</string>
-			<key>productReference</key>
-			<string>5221DCA5094FC13B36A6A71E46CB6444</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>2A8E3B69E5FAFF2C4A4EF1188508EA0D</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>29F508EE5D4CE29EB690BA9C34A54595</string>
-			<key>remoteInfo</key>
-			<string>LLSimpleCamera</string>
-		</dict>
-		<key>2B33AC409F84ACDE6099128E38EB09B5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>283836EF5A0AA5CDF757AD35B494F1FA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>034014829C1E4434983CF3A690C12017</string>
-				<string>C7E474A03CAE21F1CB6046E7344C59BD</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>31FA7D753E5E145703C361ED5326802D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5EB308E9C7823004375A70D12394847</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>33207C8D61F54684C9D813FB2098953A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>68B3857B1BF45AD91132D57840329D69</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>3EB143E0765B37DAE26ED9B78D00F2F0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>LLSimpleCamera-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>433CD3331B6C3787F473C941B61FC68F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A40AF8D79D4382828A0EEAD80AB26358</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>48C93C0D68416ABA9DC91C03E8B43A15</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4ED265AD321E6774CD7856564300AEFC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>LLSimpleCamera-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5221DCA5094FC13B36A6A71E46CB6444</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>LLSimpleCamera.framework</string>
-			<key>path</key>
-			<string>LLSimpleCamera.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5292D9E39B46CFA7BA958540B1175B5A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>LLSimpleCamera</string>
-			<key>target</key>
-			<string>29F508EE5D4CE29EB690BA9C34A54595</string>
-			<key>targetProxy</key>
-			<string>2A8E3B69E5FAFF2C4A4EF1188508EA0D</string>
-		</dict>
-		<key>54808075BA4390F15D0C44E226FCF794</key>
-		<dict>
-			<key>fileRef</key>
-			<string>96A99E1ED6492F91E6807B16994861C5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5A5F0A4AAA8AB32CC2F5F361458E0E56</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F694E578088FC2EC878D146A5F3E8DB3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-PhotoBooth/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_PhotoBooth</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5FE2988B7D2C73AF24954F73F8EC6FB8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>LLSimpleCamera-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>61742D8152D6CCC68412CCD3C79A266D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>LLSimpleCamera.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>618692DC41F85653F8930F86CF95949B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>AF420943E4943FCADA731B3304FEC762</string>
-				<string>00A4B64B4C19095B136A6E9E42C9E93A</string>
-				<string>33207C8D61F54684C9D813FB2098953A</string>
-				<string>BF70AC2063ECA692F075A39E39EAE562</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>68B3857B1BF45AD91132D57840329D69</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>LLSimpleCamera.h</string>
-			<key>path</key>
-			<string>LLSimpleCamera/LLSimpleCamera.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6A0D09DC5DA6B18F2CDB19623D4FA7F3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>48C93C0D68416ABA9DC91C03E8B43A15</string>
-				<string>BD4F51763B54F8F6C9C40481BD217946</string>
-				<string>947696414986FE9D9473512E11AEA8C6</string>
-				<string>C02549640780C2296877D379BC652A7B</string>
-				<string>C5D4F1BFD4703EE4E3AFDF41A25DE282</string>
-				<string>D07F245C48D62F061155505E1291A05C</string>
-				<string>D4A7E56D77693E0A3E3E2E7C7901064F</string>
-				<string>7FFD6B106766241C0019C0D3A039E5EB</string>
-				<string>F694E578088FC2EC878D146A5F3E8DB3</string>
-				<string>8CF10B0DC39A8DE7B065D3595E049952</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-PhotoBooth</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-PhotoBooth</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6F0284A77C825D318E2A79ED1AD023A4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B1C186114B52B58040C1B37A182D1132</string>
-				<string>9B61B8E484A2A871D6D402E0B04F116A</string>
-				<string>FB7A3BA3AD56C3FCD5ABB3136A86E1B9</string>
-				<string>31FA7D753E5E145703C361ED5326802D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>6FE8409E6DC876F054300E1FFB4279D6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIImage+FixOrientation.h</string>
-			<key>path</key>
-			<string>LLSimpleCamera/UIImage+FixOrientation.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>74DA47E09287612C606D754AC220854E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EE9C4A1FC1172B618F5960942DCC7E73</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/LLSimpleCamera/LLSimpleCamera-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/LLSimpleCamera/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/LLSimpleCamera/LLSimpleCamera.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>LLSimpleCamera</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7536353B603EBD97B2279C1C0FC7CCF1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>LLSimpleCamera.m</string>
-			<key>path</key>
-			<string>LLSimpleCamera/LLSimpleCamera.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D9915E460F63C0ECFB6CBF62D334E0E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7FFD6B106766241C0019C0D3A039E5EB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
-				<string>433CD3331B6C3787F473C941B61FC68F</string>
-				<string>15B9CD02BD82F5C6A061FD034982C0CD</string>
-				<string>A0F6AC5B70B6612DDC2B23F81780D82A</string>
-				<string>8B30A709D939BE15F7D6B4BA3362A815</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7FFD6B106766241C0019C0D3A039E5EB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B30A709D939BE15F7D6B4BA3362A815</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6A0D09DC5DA6B18F2CDB19623D4FA7F3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CF10B0DC39A8DE7B065D3595E049952</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9282D04F65FDB5FCB444B15A12BB2C3F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>LLSimpleCamera+Helper.h</string>
-			<key>path</key>
-			<string>LLSimpleCamera/LLSimpleCamera+Helper.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9299A1B7D06CCF624A074C1E3C90659E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>LLSimpleCamera+Helper.m</string>
-			<key>path</key>
-			<string>LLSimpleCamera/LLSimpleCamera+Helper.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>text.script.ruby</string>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>947696414986FE9D9473512E11AEA8C6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>96A99E1ED6492F91E6807B16994861C5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>99DB9070A27275978B3360399F86AFFA</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>AF67DD7F61E12F2AAE715DAF21E4F45B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D726442068A3F6C07E94F6A2F20B0AE9</string>
-				<string>E0A0E972DB1E83C625C7CAB9FF673B19</string>
-				<string>E6CF304759795B84F02A0C85013C0B06</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5292D9E39B46CFA7BA958540B1175B5A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-PhotoBooth</string>
-			<key>productName</key>
-			<string>Pods-PhotoBooth</string>
-			<key>productReference</key>
-			<string>EB08B35654B2A0EA5EE03E3F25B9B895</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>9B61B8E484A2A871D6D402E0B04F116A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4ED265AD321E6774CD7856564300AEFC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A0F6AC5B70B6612DDC2B23F81780D82A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5221DCA5094FC13B36A6A71E46CB6444</string>
-				<string>EB08B35654B2A0EA5EE03E3F25B9B895</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A40AF8D79D4382828A0EEAD80AB26358</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>283836EF5A0AA5CDF757AD35B494F1FA</string>
-				<string>96A99E1ED6492F91E6807B16994861C5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A621E56F35B2FBC935C96411C802BAE5</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8CF10B0DC39A8DE7B065D3595E049952</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-PhotoBooth/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_PhotoBooth</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>AD9AA7426C89B6E67E2830C8780E5C23</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AF420943E4943FCADA731B3304FEC762</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9282D04F65FDB5FCB444B15A12BB2C3F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>AF67DD7F61E12F2AAE715DAF21E4F45B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5A5F0A4AAA8AB32CC2F5F361458E0E56</string>
-				<string>A621E56F35B2FBC935C96411C802BAE5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B1C186114B52B58040C1B37A182D1132</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9299A1B7D06CCF624A074C1E3C90659E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD4F51763B54F8F6C9C40481BD217946</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF70AC2063ECA692F075A39E39EAE562</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6FE8409E6DC876F054300E1FFB4279D6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>C02549640780C2296877D379BC652A7B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5973AC134D6F71690ECA59308569EB2</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EE9C4A1FC1172B618F5960942DCC7E73</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/LLSimpleCamera/LLSimpleCamera-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/LLSimpleCamera/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/LLSimpleCamera/LLSimpleCamera.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>LLSimpleCamera</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C5D4F1BFD4703EE4E3AFDF41A25DE282</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5EB308E9C7823004375A70D12394847</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIImage+FixOrientation.m</string>
-			<key>path</key>
-			<string>LLSimpleCamera/UIImage+FixOrientation.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7E474A03CAE21F1CB6046E7344C59BD</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>POD_CONFIGURATION_RELEASE=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CD322269872A0FAF2ECE6D5D6157E2B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5D4F1BFD4703EE4E3AFDF41A25DE282</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D07F245C48D62F061155505E1291A05C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>A0F6AC5B70B6612DDC2B23F81780D82A</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>29F508EE5D4CE29EB690BA9C34A54595</string>
-				<string>99DB9070A27275978B3360399F86AFFA</string>
-			</array>
-		</dict>
-		<key>D4A7E56D77693E0A3E3E2E7C7901064F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D726442068A3F6C07E94F6A2F20B0AE9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CD322269872A0FAF2ECE6D5D6157E2B6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E0A0E972DB1E83C625C7CAB9FF673B19</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>54808075BA4390F15D0C44E226FCF794</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E5FB42C0BC216C1407FF2318C4DB15C2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2B33AC409F84ACDE6099128E38EB09B5</string>
-				<string>1030DC4EE67FE81F426349548536957E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E6CF304759795B84F02A0C85013C0B06</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7D9915E460F63C0ECFB6CBF62D334E0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EB08B35654B2A0EA5EE03E3F25B9B895</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_PhotoBooth.framework</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EE9C4A1FC1172B618F5960942DCC7E73</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>LLSimpleCamera.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F694E578088FC2EC878D146A5F3E8DB3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PhotoBooth.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FB7A3BA3AD56C3FCD5ABB3136A86E1B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7536353B603EBD97B2279C1C0FC7CCF1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01E6B86AFAEEACC381801C53CD69B3B5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F781FF1ADCB320D5ACE01B11C9F24922 /* ImageIO.framework */; };
+		09A70E10F4CADAFEEE7764BE6BFAECC5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6F371A9088D4EEB3BA16DA2D46E6B9 /* AVFoundation.framework */; };
+		0CCD4595F927197ACDDCEA3C394AC438 /* GRDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A8368143B7AD2093DBA5C6DFDFCEE7 /* GRDownloadRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1002F216AA39B195AAE4395B558D9365 /* GRDeleteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0575B534727EE3624AA9A682D8A3E0D1 /* GRDeleteRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1277FFDB18EBD46968E4CFA4A79EBA28 /* GRListingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8823F7B153559F85CF7BB0AAADADAA36 /* GRListingRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		13C0F65B9E30E388BDA126897DDBFE09 /* LLSimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 724AA933F84ECC7FE8E4BA679D20C3F1 /* LLSimpleCamera.m */; };
+		186BC048D595358894E5FF6A49597345 /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB3A655EDC7FD28F577150EA24124E /* YYImageCoder.m */; };
+		1B5C958E91C61D9CFEEF0EE7E68C91A8 /* YYSpriteSheetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4D3338F3FF1E5BC07F9046C598F7B6 /* YYSpriteSheetImage.m */; };
+		202ED07923CACB81649EAD1A949A8486 /* LLSimpleCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4A35EAB9BAFE61AB40D0F34922230A /* LLSimpleCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BF71A981E01F38AA2B45A2031F37DBD /* GRListingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 85151229D0C2FF5340CBEC018CBA90EE /* GRListingRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C9294D707856582CD0236ABBF59DC2B /* YYAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CCB01488E947E04F39744EC9755007 /* YYAnimatedImageView.m */; };
+		2FCD2D22770183D9AAFA7487FB48DD97 /* GRRequestsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C84D27335F6D1A5059576D86CE375846 /* GRRequestsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BC78D6FAB04D260473998D70CA66AE7 /* LLSimpleCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A4DED0BE2A86EFC11CB77385413BE /* LLSimpleCamera-dummy.m */; };
+		4B6D04D84523DA16793D5285BDCDC29E /* UIImage+FixOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CDE1E43F3136274E5463B1CF066568B /* UIImage+FixOrientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5064E8F8B2AA1E6C4342FFFE0D688DD6 /* GRStreamInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FEAB9A14907D7F45CB343BC09B4C3A1 /* GRStreamInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58727B8C101A45CD63DF7D4E6110B8FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E11BA6AAC7D30063561B3DE3B605EA /* Foundation.framework */; };
+		5B148ED4FB2636E4AB3C29BF84C321BA /* YYAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 667C9A310DC5F822E07D45B3BB21219F /* YYAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D3D316EC453663454CAFB34E8FF40A8 /* GRRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = CF0F1EBD4831941A86B5CF2CADEAB09F /* GRRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63274711477AEF78BB40497E21D8C23D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3E65564EDC361988C742CA8B783AA3 /* MobileCoreServices.framework */; };
+		7B861257A326D10237A0B3316E0018CE /* GRCreateDirectoryRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BE787E3D67F31069D1D8EE8A3721E3C /* GRCreateDirectoryRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B9D42B5221187FB52EF4F65BCE05958 /* YYImage.h in Headers */ = {isa = PBXBuildFile; fileRef = FF4ACB762B1E6CF2274ECA50559176A1 /* YYImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BEC8E9C1F4B1E55367C16EDA37FAEFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E11BA6AAC7D30063561B3DE3B605EA /* Foundation.framework */; };
+		7DF324C92E2292F79A036E8220C8961E /* GoldRaccoon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C82BF13BEC0661701F5D55FE2A3D7283 /* GoldRaccoon-dummy.m */; };
+		7E535C658C21BA303A0EA1F1946FCD86 /* GRQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F71D539C5E82FD15784D7F9BCE70BB38 /* GRQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		853D515FA2BA4327D1C443436F091901 /* GRStreamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB78FC1201DF07B892A5BB039B82810 /* GRStreamInfo.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		860727014E13F98118131DD307FEB826 /* GRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4B75A87D0B54E247B360135C92B466 /* GRRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		870BC75FCC173E753D4F75B195216A5B /* GRDownloadRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AE7DA9C949B86B81C72CED871CED07F1 /* GRDownloadRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B1F75E40FA1A74219D67DFEF23D0B3D /* GRUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F689AC4C10BC8F7B5DC65DF6813E8A /* GRUploadRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8E6217657B8DDA3E1206E568C87D54A0 /* GRQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 2469C2657ED55E0E6057A1E31939F67D /* GRQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E68EB2F00A3C2C8952DC9BD01E98606 /* LLSimpleCamera+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC701E59FA11F97FB444C31AEF10DB5 /* LLSimpleCamera+Helper.m */; };
+		918682D1A3088DD622AF5713097689F9 /* GRRequestsManagerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 36BB8D0C60C57C0C86B2E7B900419B75 /* GRRequestsManagerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E70B5DCE7A46D396D12B8F75BCCE9F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E11BA6AAC7D30063561B3DE3B605EA /* Foundation.framework */; };
+		9FB01FC8D285275B5D65E337BA716CEE /* GoldRaccoon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AA9D135593BBC53369FDC95367FD97A /* GoldRaccoon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FB888285802F376DFE23724131707C6 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EE16F71A1C5C7A9E78877EB01E7C87 /* UIImage+FixOrientation.m */; };
+		9FF08B4F31B19C1888BE07E8D6DB2945 /* YYFrameImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BF7915CC6CECD306CDB81A0C0ADDA66 /* YYFrameImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2ABF2FB2ABCBD486AC99535E535945C /* YYImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67A1680E0162D3D8F762A4CC6B41784B /* YYImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3D5F09001E723A2EEED59CB82270595 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EC5C493E6F3A554CC4ADCDE5EF3E27 /* QuartzCore.framework */; };
+		AB17733974F24A38A9990B1C7DC2E21F /* GRUploadRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F5EDF85BD2C0A498B6FA85A2349C29 /* GRUploadRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB83E86F517623E3DB598F26984306F7 /* GRRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C2CD5206C841FF62C99681DA2D32175F /* GRRequestProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8CB83AD259FC5033D63B4C19C81068 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD3B91FE184D6E92C91371C8AF18246 /* Accelerate.framework */; };
+		AD4C9F3C0633538899B0A0AB9504D90A /* YYImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84B2E95A66F0707B30BAF68EEAE6FB7 /* YYImage-dummy.m */; };
+		BB527ECDAC204EB5F861A07C43B1696B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8823835B38E90177D9F0D38C7F6FB9C2 /* AssetsLibrary.framework */; };
+		C26E73A5907DA69839A391DE90A60580 /* Pods-PhotoBooth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FFD6B106766241C0019C0D3A039E5EB /* Pods-PhotoBooth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C60AAD8145190648F842036733BE5710 /* GRCreateDirectoryRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10696A122A94FA6930F5F165DE483A4A /* GRCreateDirectoryRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D07DF3EF79C9BDA3A80ED8C1FBAB7761 /* GRRequestsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 964B42D163F3E590B66C82ADCE38FBBA /* GRRequestsManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D21E9C9A695A6FF0923606E115D04198 /* GRError.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DADFA80C1C5E63DE63DBC32448D4D01 /* GRError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3FEDA53A3CBCBE5676EF10C6F6380C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A015A289C56913AEF35086E25F0EF96A /* UIKit.framework */; };
+		D48D8DA6C934F69D37E3AA20F2333F92 /* YYImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D717A77B7A337CF87B7CE84AB4C9C48 /* YYImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D954434BC51931644AC95B44B1FFAD2B /* GRDeleteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD88201BD852DD7C8324A8DA2C249C3 /* GRDeleteRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA85943FBA520C9ECCF3848608E45C53 /* LLSimpleCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45AFF603FD4EA7E8D3829AD954ACE77E /* LLSimpleCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF74B8DD0D37B74E44988F4C8E424DE8 /* YYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7A3EF7B2B9269F34F36ACF2C50B77A /* YYImage.m */; };
+		E30AD0A967EC0548C10B8EF5258B06D6 /* YYSpriteSheetImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A97493CF50BDB630A61E9D2B1AFAEC04 /* YYSpriteSheetImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E63D5F4B3B9F16FD64FA471E3ADA9CA0 /* YYFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC5052B79A283FB10FC062771539A7 /* YYFrameImage.m */; };
+		EEB75A29AF514DB941FD98D486670FAD /* LLSimpleCamera+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 794B6B1311FEF391B58AC33B3851D804 /* LLSimpleCamera+Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF5CA8EFD1B0B4F83A4E643536D4F9AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E11BA6AAC7D30063561B3DE3B605EA /* Foundation.framework */; };
+		F6F631D8F9B668DF134A0B29D3CBA7C6 /* GRError.m in Sources */ = {isa = PBXBuildFile; fileRef = 8904D53292C3DBD24710E5DD343B611D /* GRError.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FE1C36C871B6A8E8DEF5F574AFD1C752 /* Pods-PhotoBooth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4F1BFD4703EE4E3AFDF41A25DE282 /* Pods-PhotoBooth-dummy.m */; };
+		FE445F2013C3ABBBB02DA47C72898621 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C355593E3C500296F97667E985896E1E /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79ADAC0CF3D58A8F57115F61C703AF03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8362B6C83F1BC58C2EB1CFD322ACE4B7;
+			remoteInfo = LLSimpleCamera;
+		};
+		B0243C0271FAABD1AF61D443720E6415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECF6A573EF0295DB1798496676097C9A;
+			remoteInfo = GoldRaccoon;
+		};
+		E48325204A003F6039AE8E0DE448DA69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C159E35CAE88573877040C479D3C94D;
+			remoteInfo = YYImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0575B534727EE3624AA9A682D8A3E0D1 /* GRDeleteRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRDeleteRequest.m; path = GoldRaccoon/Sources/Requests/GRDeleteRequest.m; sourceTree = "<group>"; };
+		0A84AC4E902C628930E4D1F6E4849BBC /* LLSimpleCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LLSimpleCamera-prefix.pch"; sourceTree = "<group>"; };
+		0CDE1E43F3136274E5463B1CF066568B /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+FixOrientation.h"; path = "LLSimpleCamera/UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		0D7A3EF7B2B9269F34F36ACF2C50B77A /* YYImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYImage.m; path = YYImage/YYImage.m; sourceTree = "<group>"; };
+		10696A122A94FA6930F5F165DE483A4A /* GRCreateDirectoryRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRCreateDirectoryRequest.m; path = GoldRaccoon/Sources/Requests/GRCreateDirectoryRequest.m; sourceTree = "<group>"; };
+		18BC5052B79A283FB10FC062771539A7 /* YYFrameImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYFrameImage.m; path = YYImage/YYFrameImage.m; sourceTree = "<group>"; };
+		1B4B75A87D0B54E247B360135C92B466 /* GRRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRRequest.m; path = GoldRaccoon/Sources/Requests/GRRequest.m; sourceTree = "<group>"; };
+		1CD3B91FE184D6E92C91371C8AF18246 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		2469C2657ED55E0E6057A1E31939F67D /* GRQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRQueue.h; path = GoldRaccoon/Sources/Utils/GRQueue.h; sourceTree = "<group>"; };
+		253E85F9D45F44DE53B793756EE92633 /* YYImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = YYImage.modulemap; sourceTree = "<group>"; };
+		27EE16F71A1C5C7A9E78877EB01E7C87 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FixOrientation.m"; path = "LLSimpleCamera/UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		2AA9D135593BBC53369FDC95367FD97A /* GoldRaccoon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoldRaccoon-umbrella.h"; sourceTree = "<group>"; };
+		2DAB3A655EDC7FD28F577150EA24124E /* YYImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYImageCoder.m; path = YYImage/YYImageCoder.m; sourceTree = "<group>"; };
+		36BB8D0C60C57C0C86B2E7B900419B75 /* GRRequestsManagerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRRequestsManagerProtocol.h; path = GoldRaccoon/Sources/GRRequestsManagerProtocol.h; sourceTree = "<group>"; };
+		3D717A77B7A337CF87B7CE84AB4C9C48 /* YYImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYImageCoder.h; path = YYImage/YYImageCoder.h; sourceTree = "<group>"; };
+		3DC9D6C2F0AB65D629B340E1515271A3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45AFF603FD4EA7E8D3829AD954ACE77E /* LLSimpleCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LLSimpleCamera-umbrella.h"; sourceTree = "<group>"; };
+		48C93C0D68416ABA9DC91C03E8B43A15 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BF7915CC6CECD306CDB81A0C0ADDA66 /* YYFrameImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYFrameImage.h; path = YYImage/YYFrameImage.h; sourceTree = "<group>"; };
+		4D3A4DED0BE2A86EFC11CB77385413BE /* LLSimpleCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LLSimpleCamera-dummy.m"; sourceTree = "<group>"; };
+		4DADFA80C1C5E63DE63DBC32448D4D01 /* GRError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRError.h; path = GoldRaccoon/Sources/Utils/GRError.h; sourceTree = "<group>"; };
+		4E847103D96453D3BD660284D5F34522 /* LLSimpleCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LLSimpleCamera.modulemap; sourceTree = "<group>"; };
+		4EB78FC1201DF07B892A5BB039B82810 /* GRStreamInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRStreamInfo.m; path = GoldRaccoon/Sources/Utils/GRStreamInfo.m; sourceTree = "<group>"; };
+		59F5EDF85BD2C0A498B6FA85A2349C29 /* GRUploadRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRUploadRequest.h; path = GoldRaccoon/Sources/Requests/GRUploadRequest.h; sourceTree = "<group>"; };
+		5A439AD3A2B078273F5A551579329993 /* GoldRaccoon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoldRaccoon.modulemap; sourceTree = "<group>"; };
+		5CB7E201BF48D402DE4C5A2C86613C67 /* Pods_PhotoBooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PhotoBooth.framework; path = "Pods-PhotoBooth.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65BF592C01347E0811B536C6D47248B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		667C9A310DC5F822E07D45B3BB21219F /* YYAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYAnimatedImageView.h; path = YYImage/YYAnimatedImageView.h; sourceTree = "<group>"; };
+		67A1680E0162D3D8F762A4CC6B41784B /* YYImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYImage-umbrella.h"; sourceTree = "<group>"; };
+		6BE787E3D67F31069D1D8EE8A3721E3C /* GRCreateDirectoryRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRCreateDirectoryRequest.h; path = GoldRaccoon/Sources/Requests/GRCreateDirectoryRequest.h; sourceTree = "<group>"; };
+		6FEAB9A14907D7F45CB343BC09B4C3A1 /* GRStreamInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRStreamInfo.h; path = GoldRaccoon/Sources/Utils/GRStreamInfo.h; sourceTree = "<group>"; };
+		724AA933F84ECC7FE8E4BA679D20C3F1 /* LLSimpleCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LLSimpleCamera.m; path = LLSimpleCamera/LLSimpleCamera.m; sourceTree = "<group>"; };
+		794B6B1311FEF391B58AC33B3851D804 /* LLSimpleCamera+Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LLSimpleCamera+Helper.h"; path = "LLSimpleCamera/LLSimpleCamera+Helper.h"; sourceTree = "<group>"; };
+		7FFD6B106766241C0019C0D3A039E5EB /* Pods-PhotoBooth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhotoBooth-umbrella.h"; sourceTree = "<group>"; };
+		85151229D0C2FF5340CBEC018CBA90EE /* GRListingRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRListingRequest.h; path = GoldRaccoon/Sources/Requests/GRListingRequest.h; sourceTree = "<group>"; };
+		8823835B38E90177D9F0D38C7F6FB9C2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		8823F7B153559F85CF7BB0AAADADAA36 /* GRListingRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRListingRequest.m; path = GoldRaccoon/Sources/Requests/GRListingRequest.m; sourceTree = "<group>"; };
+		8904D53292C3DBD24710E5DD343B611D /* GRError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRError.m; path = GoldRaccoon/Sources/Utils/GRError.m; sourceTree = "<group>"; };
+		8C3E65564EDC361988C742CA8B783AA3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		8CF10B0DC39A8DE7B065D3595E049952 /* Pods-PhotoBooth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoBooth.release.xcconfig"; sourceTree = "<group>"; };
+		9361691CBAF6407047B1CE803898DD2D /* GoldRaccoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoldRaccoon.framework; path = GoldRaccoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		947696414986FE9D9473512E11AEA8C6 /* Pods-PhotoBooth-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoBooth-acknowledgements.markdown"; sourceTree = "<group>"; };
+		964B42D163F3E590B66C82ADCE38FBBA /* GRRequestsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRRequestsManager.m; path = GoldRaccoon/Sources/GRRequestsManager.m; sourceTree = "<group>"; };
+		96EC5C493E6F3A554CC4ADCDE5EF3E27 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		9AB2A366012BD087ABBB184D8DF08074 /* YYImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYImage.xcconfig; sourceTree = "<group>"; };
+		9BC701E59FA11F97FB444C31AEF10DB5 /* LLSimpleCamera+Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LLSimpleCamera+Helper.m"; path = "LLSimpleCamera/LLSimpleCamera+Helper.m"; sourceTree = "<group>"; };
+		9C4A35EAB9BAFE61AB40D0F34922230A /* LLSimpleCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LLSimpleCamera.h; path = LLSimpleCamera/LLSimpleCamera.h; sourceTree = "<group>"; };
+		A015A289C56913AEF35086E25F0EF96A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A4E11BA6AAC7D30063561B3DE3B605EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A97493CF50BDB630A61E9D2B1AFAEC04 /* YYSpriteSheetImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYSpriteSheetImage.h; path = YYImage/YYSpriteSheetImage.h; sourceTree = "<group>"; };
+		AC6F371A9088D4EEB3BA16DA2D46E6B9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		AD37445C62F001FAECB4889B0ECB35A6 /* YYImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYImage.framework; path = YYImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7DA9C949B86B81C72CED871CED07F1 /* GRDownloadRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRDownloadRequest.h; path = GoldRaccoon/Sources/Requests/GRDownloadRequest.h; sourceTree = "<group>"; };
+		B0B6AD1B34FC6DA43E983EB4779D5E5C /* GoldRaccoon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoldRaccoon-prefix.pch"; sourceTree = "<group>"; };
+		B4A8368143B7AD2093DBA5C6DFDFCEE7 /* GRDownloadRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRDownloadRequest.m; path = GoldRaccoon/Sources/Requests/GRDownloadRequest.m; sourceTree = "<group>"; };
+		BD4F51763B54F8F6C9C40481BD217946 /* Pods-PhotoBooth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PhotoBooth.modulemap"; sourceTree = "<group>"; };
+		C02549640780C2296877D379BC652A7B /* Pods-PhotoBooth-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoBooth-acknowledgements.plist"; sourceTree = "<group>"; };
+		C2CD5206C841FF62C99681DA2D32175F /* GRRequestProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRRequestProtocol.h; path = GoldRaccoon/Sources/Requests/GRRequestProtocol.h; sourceTree = "<group>"; };
+		C355593E3C500296F97667E985896E1E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		C5D4F1BFD4703EE4E3AFDF41A25DE282 /* Pods-PhotoBooth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoBooth-dummy.m"; sourceTree = "<group>"; };
+		C82BF13BEC0661701F5D55FE2A3D7283 /* GoldRaccoon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoldRaccoon-dummy.m"; sourceTree = "<group>"; };
+		C84B2E95A66F0707B30BAF68EEAE6FB7 /* YYImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYImage-dummy.m"; sourceTree = "<group>"; };
+		C84D27335F6D1A5059576D86CE375846 /* GRRequestsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRRequestsManager.h; path = GoldRaccoon/Sources/GRRequestsManager.h; sourceTree = "<group>"; };
+		CF0F1EBD4831941A86B5CF2CADEAB09F /* GRRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRRequest.h; path = GoldRaccoon/Sources/Requests/GRRequest.h; sourceTree = "<group>"; };
+		D07F245C48D62F061155505E1291A05C /* Pods-PhotoBooth-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoBooth-frameworks.sh"; sourceTree = "<group>"; };
+		D4A7E56D77693E0A3E3E2E7C7901064F /* Pods-PhotoBooth-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhotoBooth-resources.sh"; sourceTree = "<group>"; };
+		D9BE58429B121133719C007CC5D741CE /* YYImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYImage-prefix.pch"; sourceTree = "<group>"; };
+		D9CCB01488E947E04F39744EC9755007 /* YYAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYAnimatedImageView.m; path = YYImage/YYAnimatedImageView.m; sourceTree = "<group>"; };
+		DE4D3338F3FF1E5BC07F9046C598F7B6 /* YYSpriteSheetImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYSpriteSheetImage.m; path = YYImage/YYSpriteSheetImage.m; sourceTree = "<group>"; };
+		E9574BD5A3F3C6B8BDF83BC4239BA81D /* LLSimpleCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LLSimpleCamera.framework; path = LLSimpleCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACB0C4D302ECE54FA2BD033DF352BA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0F689AC4C10BC8F7B5DC65DF6813E8A /* GRUploadRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRUploadRequest.m; path = GoldRaccoon/Sources/Requests/GRUploadRequest.m; sourceTree = "<group>"; };
+		F694E578088FC2EC878D146A5F3E8DB3 /* Pods-PhotoBooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoBooth.debug.xcconfig"; sourceTree = "<group>"; };
+		F71D539C5E82FD15784D7F9BCE70BB38 /* GRQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GRQueue.m; path = GoldRaccoon/Sources/Utils/GRQueue.m; sourceTree = "<group>"; };
+		F781FF1ADCB320D5ACE01B11C9F24922 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		F89949134E1D26C2036715FC11842FB2 /* GoldRaccoon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoldRaccoon.xcconfig; sourceTree = "<group>"; };
+		FAD88201BD852DD7C8324A8DA2C249C3 /* GRDeleteRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRDeleteRequest.h; path = GoldRaccoon/Sources/Requests/GRDeleteRequest.h; sourceTree = "<group>"; };
+		FDBA799AD4B865FA276DEA3E95B4E3CE /* LLSimpleCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LLSimpleCamera.xcconfig; sourceTree = "<group>"; };
+		FF4ACB762B1E6CF2274ECA50559176A1 /* YYImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYImage.h; path = YYImage/YYImage.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48E5980D8DC56B6869AEAD4537B0ECBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5CA8EFD1B0B4F83A4E643536D4F9AD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		525F657236B07CD4D439C923C444CEF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58727B8C101A45CD63DF7D4E6110B8FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782E0929DAD7F5EF31401FDB67E79025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB8CB83AD259FC5033D63B4C19C81068 /* Accelerate.framework in Frameworks */,
+				BB527ECDAC204EB5F861A07C43B1696B /* AssetsLibrary.framework in Frameworks */,
+				FE445F2013C3ABBBB02DA47C72898621 /* CoreFoundation.framework in Frameworks */,
+				9E70B5DCE7A46D396D12B8F75BCCE9F3 /* Foundation.framework in Frameworks */,
+				01E6B86AFAEEACC381801C53CD69B3B5 /* ImageIO.framework in Frameworks */,
+				63274711477AEF78BB40497E21D8C23D /* MobileCoreServices.framework in Frameworks */,
+				A3D5F09001E723A2EEED59CB82270595 /* QuartzCore.framework in Frameworks */,
+				D3FEDA53A3CBCBE5676EF10C6F6380C8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7848917249116AA105590F064E40CCBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A70E10F4CADAFEEE7764BE6BFAECC5 /* AVFoundation.framework in Frameworks */,
+				7BEC8E9C1F4B1E55367C16EDA37FAEFE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A35E69CB864E8E169817CF22FCA1871 /* GoldRaccoon */ = {
+			isa = PBXGroup;
+			children = (
+				6BE787E3D67F31069D1D8EE8A3721E3C /* GRCreateDirectoryRequest.h */,
+				10696A122A94FA6930F5F165DE483A4A /* GRCreateDirectoryRequest.m */,
+				FAD88201BD852DD7C8324A8DA2C249C3 /* GRDeleteRequest.h */,
+				0575B534727EE3624AA9A682D8A3E0D1 /* GRDeleteRequest.m */,
+				AE7DA9C949B86B81C72CED871CED07F1 /* GRDownloadRequest.h */,
+				B4A8368143B7AD2093DBA5C6DFDFCEE7 /* GRDownloadRequest.m */,
+				4DADFA80C1C5E63DE63DBC32448D4D01 /* GRError.h */,
+				8904D53292C3DBD24710E5DD343B611D /* GRError.m */,
+				85151229D0C2FF5340CBEC018CBA90EE /* GRListingRequest.h */,
+				8823F7B153559F85CF7BB0AAADADAA36 /* GRListingRequest.m */,
+				2469C2657ED55E0E6057A1E31939F67D /* GRQueue.h */,
+				F71D539C5E82FD15784D7F9BCE70BB38 /* GRQueue.m */,
+				CF0F1EBD4831941A86B5CF2CADEAB09F /* GRRequest.h */,
+				1B4B75A87D0B54E247B360135C92B466 /* GRRequest.m */,
+				C2CD5206C841FF62C99681DA2D32175F /* GRRequestProtocol.h */,
+				C84D27335F6D1A5059576D86CE375846 /* GRRequestsManager.h */,
+				964B42D163F3E590B66C82ADCE38FBBA /* GRRequestsManager.m */,
+				36BB8D0C60C57C0C86B2E7B900419B75 /* GRRequestsManagerProtocol.h */,
+				6FEAB9A14907D7F45CB343BC09B4C3A1 /* GRStreamInfo.h */,
+				4EB78FC1201DF07B892A5BB039B82810 /* GRStreamInfo.m */,
+				59F5EDF85BD2C0A498B6FA85A2349C29 /* GRUploadRequest.h */,
+				F0F689AC4C10BC8F7B5DC65DF6813E8A /* GRUploadRequest.m */,
+				166A2EEEFA460BD54F75BAE8B40E9142 /* Support Files */,
+			);
+			name = GoldRaccoon;
+			path = GoldRaccoon;
+			sourceTree = "<group>";
+		};
+		166A2EEEFA460BD54F75BAE8B40E9142 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A439AD3A2B078273F5A551579329993 /* GoldRaccoon.modulemap */,
+				F89949134E1D26C2036715FC11842FB2 /* GoldRaccoon.xcconfig */,
+				C82BF13BEC0661701F5D55FE2A3D7283 /* GoldRaccoon-dummy.m */,
+				B0B6AD1B34FC6DA43E983EB4779D5E5C /* GoldRaccoon-prefix.pch */,
+				2AA9D135593BBC53369FDC95367FD97A /* GoldRaccoon-umbrella.h */,
+				65BF592C01347E0811B536C6D47248B9 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoldRaccoon";
+			sourceTree = "<group>";
+		};
+		19439DEAAC8587068A1C4AE7BE379424 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1CD3B91FE184D6E92C91371C8AF18246 /* Accelerate.framework */,
+				8823835B38E90177D9F0D38C7F6FB9C2 /* AssetsLibrary.framework */,
+				AC6F371A9088D4EEB3BA16DA2D46E6B9 /* AVFoundation.framework */,
+				C355593E3C500296F97667E985896E1E /* CoreFoundation.framework */,
+				A4E11BA6AAC7D30063561B3DE3B605EA /* Foundation.framework */,
+				F781FF1ADCB320D5ACE01B11C9F24922 /* ImageIO.framework */,
+				8C3E65564EDC361988C742CA8B783AA3 /* MobileCoreServices.framework */,
+				96EC5C493E6F3A554CC4ADCDE5EF3E27 /* QuartzCore.framework */,
+				A015A289C56913AEF35086E25F0EF96A /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1D3D494B518F1D0A0286A1FDC174B576 /* YYImage */ = {
+			isa = PBXGroup;
+			children = (
+				36349E5ABB9C41A5C30E82F0EAD8714E /* Core */,
+				D3A2592180909708E7AD781F41D6EEFF /* Support Files */,
+			);
+			name = YYImage;
+			path = YYImage;
+			sourceTree = "<group>";
+		};
+		24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19439DEAAC8587068A1C4AE7BE379424 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29483180C4CF6FB086C206B910EEA546 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9361691CBAF6407047B1CE803898DD2D /* GoldRaccoon.framework */,
+				E9574BD5A3F3C6B8BDF83BC4239BA81D /* LLSimpleCamera.framework */,
+				5CB7E201BF48D402DE4C5A2C86613C67 /* Pods_PhotoBooth.framework */,
+				AD37445C62F001FAECB4889B0ECB35A6 /* YYImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36349E5ABB9C41A5C30E82F0EAD8714E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				667C9A310DC5F822E07D45B3BB21219F /* YYAnimatedImageView.h */,
+				D9CCB01488E947E04F39744EC9755007 /* YYAnimatedImageView.m */,
+				4BF7915CC6CECD306CDB81A0C0ADDA66 /* YYFrameImage.h */,
+				18BC5052B79A283FB10FC062771539A7 /* YYFrameImage.m */,
+				FF4ACB762B1E6CF2274ECA50559176A1 /* YYImage.h */,
+				0D7A3EF7B2B9269F34F36ACF2C50B77A /* YYImage.m */,
+				3D717A77B7A337CF87B7CE84AB4C9C48 /* YYImageCoder.h */,
+				2DAB3A655EDC7FD28F577150EA24124E /* YYImageCoder.m */,
+				A97493CF50BDB630A61E9D2B1AFAEC04 /* YYSpriteSheetImage.h */,
+				DE4D3338F3FF1E5BC07F9046C598F7B6 /* YYSpriteSheetImage.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		458AF26C84DC2F2C010C6D711CEBCE00 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9D6C2F0AB65D629B340E1515271A3 /* Info.plist */,
+				4E847103D96453D3BD660284D5F34522 /* LLSimpleCamera.modulemap */,
+				FDBA799AD4B865FA276DEA3E95B4E3CE /* LLSimpleCamera.xcconfig */,
+				4D3A4DED0BE2A86EFC11CB77385413BE /* LLSimpleCamera-dummy.m */,
+				0A84AC4E902C628930E4D1F6E4849BBC /* LLSimpleCamera-prefix.pch */,
+				45AFF603FD4EA7E8D3829AD954ACE77E /* LLSimpleCamera-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LLSimpleCamera";
+			sourceTree = "<group>";
+		};
+		4B0CD0A039AB1E6E43ECDDFF2E4AD4CC /* LLSimpleCamera */ = {
+			isa = PBXGroup;
+			children = (
+				9C4A35EAB9BAFE61AB40D0F34922230A /* LLSimpleCamera.h */,
+				724AA933F84ECC7FE8E4BA679D20C3F1 /* LLSimpleCamera.m */,
+				794B6B1311FEF391B58AC33B3851D804 /* LLSimpleCamera+Helper.h */,
+				9BC701E59FA11F97FB444C31AEF10DB5 /* LLSimpleCamera+Helper.m */,
+				0CDE1E43F3136274E5463B1CF066568B /* UIImage+FixOrientation.h */,
+				27EE16F71A1C5C7A9E78877EB01E7C87 /* UIImage+FixOrientation.m */,
+				458AF26C84DC2F2C010C6D711CEBCE00 /* Support Files */,
+			);
+			name = LLSimpleCamera;
+			path = LLSimpleCamera;
+			sourceTree = "<group>";
+		};
+		6A0D09DC5DA6B18F2CDB19623D4FA7F3 /* Pods-PhotoBooth */ = {
+			isa = PBXGroup;
+			children = (
+				48C93C0D68416ABA9DC91C03E8B43A15 /* Info.plist */,
+				BD4F51763B54F8F6C9C40481BD217946 /* Pods-PhotoBooth.modulemap */,
+				947696414986FE9D9473512E11AEA8C6 /* Pods-PhotoBooth-acknowledgements.markdown */,
+				C02549640780C2296877D379BC652A7B /* Pods-PhotoBooth-acknowledgements.plist */,
+				C5D4F1BFD4703EE4E3AFDF41A25DE282 /* Pods-PhotoBooth-dummy.m */,
+				D07F245C48D62F061155505E1291A05C /* Pods-PhotoBooth-frameworks.sh */,
+				D4A7E56D77693E0A3E3E2E7C7901064F /* Pods-PhotoBooth-resources.sh */,
+				7FFD6B106766241C0019C0D3A039E5EB /* Pods-PhotoBooth-umbrella.h */,
+				F694E578088FC2EC878D146A5F3E8DB3 /* Pods-PhotoBooth.debug.xcconfig */,
+				8CF10B0DC39A8DE7B065D3595E049952 /* Pods-PhotoBooth.release.xcconfig */,
+			);
+			name = "Pods-PhotoBooth";
+			path = "Target Support Files/Pods-PhotoBooth";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */,
+				904395D187B64EE8F803513D59C2AF49 /* Pods */,
+				29483180C4CF6FB086C206B910EEA546 /* Products */,
+				8B30A709D939BE15F7D6B4BA3362A815 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8B30A709D939BE15F7D6B4BA3362A815 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A0D09DC5DA6B18F2CDB19623D4FA7F3 /* Pods-PhotoBooth */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		904395D187B64EE8F803513D59C2AF49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A35E69CB864E8E169817CF22FCA1871 /* GoldRaccoon */,
+				4B0CD0A039AB1E6E43ECDDFF2E4AD4CC /* LLSimpleCamera */,
+				1D3D494B518F1D0A0286A1FDC174B576 /* YYImage */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D3A2592180909708E7AD781F41D6EEFF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EACB0C4D302ECE54FA2BD033DF352BA9 /* Info.plist */,
+				253E85F9D45F44DE53B793756EE92633 /* YYImage.modulemap */,
+				9AB2A366012BD087ABBB184D8DF08074 /* YYImage.xcconfig */,
+				C84B2E95A66F0707B30BAF68EEAE6FB7 /* YYImage-dummy.m */,
+				D9BE58429B121133719C007CC5D741CE /* YYImage-prefix.pch */,
+				67A1680E0162D3D8F762A4CC6B41784B /* YYImage-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YYImage";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		36195DA6CC1467F9D884F59DBBED43E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B148ED4FB2636E4AB3C29BF84C321BA /* YYAnimatedImageView.h in Headers */,
+				9FF08B4F31B19C1888BE07E8D6DB2945 /* YYFrameImage.h in Headers */,
+				A2ABF2FB2ABCBD486AC99535E535945C /* YYImage-umbrella.h in Headers */,
+				7B9D42B5221187FB52EF4F65BCE05958 /* YYImage.h in Headers */,
+				D48D8DA6C934F69D37E3AA20F2333F92 /* YYImageCoder.h in Headers */,
+				E30AD0A967EC0548C10B8EF5258B06D6 /* YYSpriteSheetImage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9173CA7477C8E52109A2628DC519AE9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB01FC8D285275B5D65E337BA716CEE /* GoldRaccoon-umbrella.h in Headers */,
+				7B861257A326D10237A0B3316E0018CE /* GRCreateDirectoryRequest.h in Headers */,
+				D954434BC51931644AC95B44B1FFAD2B /* GRDeleteRequest.h in Headers */,
+				870BC75FCC173E753D4F75B195216A5B /* GRDownloadRequest.h in Headers */,
+				D21E9C9A695A6FF0923606E115D04198 /* GRError.h in Headers */,
+				2BF71A981E01F38AA2B45A2031F37DBD /* GRListingRequest.h in Headers */,
+				8E6217657B8DDA3E1206E568C87D54A0 /* GRQueue.h in Headers */,
+				5D3D316EC453663454CAFB34E8FF40A8 /* GRRequest.h in Headers */,
+				AB83E86F517623E3DB598F26984306F7 /* GRRequestProtocol.h in Headers */,
+				2FCD2D22770183D9AAFA7487FB48DD97 /* GRRequestsManager.h in Headers */,
+				918682D1A3088DD622AF5713097689F9 /* GRRequestsManagerProtocol.h in Headers */,
+				5064E8F8B2AA1E6C4342FFFE0D688DD6 /* GRStreamInfo.h in Headers */,
+				AB17733974F24A38A9990B1C7DC2E21F /* GRUploadRequest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A51FE64A2235E1F1D77A49780BDC9FC7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26E73A5907DA69839A391DE90A60580 /* Pods-PhotoBooth-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3C8A5A86439030F0044E8B0DF8E868 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEB75A29AF514DB941FD98D486670FAD /* LLSimpleCamera+Helper.h in Headers */,
+				DA85943FBA520C9ECCF3848608E45C53 /* LLSimpleCamera-umbrella.h in Headers */,
+				202ED07923CACB81649EAD1A949A8486 /* LLSimpleCamera.h in Headers */,
+				4B6D04D84523DA16793D5285BDCDC29E /* UIImage+FixOrientation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3C159E35CAE88573877040C479D3C94D /* YYImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B8F21183511C4345C272998B8371ACE /* Build configuration list for PBXNativeTarget "YYImage" */;
+			buildPhases = (
+				03ABB6BA9C2E62FE78A64AA86FA48C6F /* Sources */,
+				782E0929DAD7F5EF31401FDB67E79025 /* Frameworks */,
+				36195DA6CC1467F9D884F59DBBED43E5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYImage;
+			productName = YYImage;
+			productReference = AD37445C62F001FAECB4889B0ECB35A6 /* YYImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8362B6C83F1BC58C2EB1CFD322ACE4B7 /* LLSimpleCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB804BE64172A2ABCCAD23455E56107 /* Build configuration list for PBXNativeTarget "LLSimpleCamera" */;
+			buildPhases = (
+				789F76D9F27A9844E46A52ED471350BC /* Sources */,
+				7848917249116AA105590F064E40CCBE /* Frameworks */,
+				FD3C8A5A86439030F0044E8B0DF8E868 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LLSimpleCamera;
+			productName = LLSimpleCamera;
+			productReference = E9574BD5A3F3C6B8BDF83BC4239BA81D /* LLSimpleCamera.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BB27A35EF05FB7E5896BE78BF38CDA79 /* Pods-PhotoBooth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EA715E6607FEFD9F38C5678F448E136 /* Build configuration list for PBXNativeTarget "Pods-PhotoBooth" */;
+			buildPhases = (
+				742035031F96B07271D9959062222209 /* Sources */,
+				48E5980D8DC56B6869AEAD4537B0ECBA /* Frameworks */,
+				A51FE64A2235E1F1D77A49780BDC9FC7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF21DC8F3A0497E9B293084939D324BA /* PBXTargetDependency */,
+				31D7C80510A1319A99F609D0A2F5C023 /* PBXTargetDependency */,
+				28E6FA27E869A466FE5DEC5F1B38C7C8 /* PBXTargetDependency */,
+			);
+			name = "Pods-PhotoBooth";
+			productName = "Pods-PhotoBooth";
+			productReference = 5CB7E201BF48D402DE4C5A2C86613C67 /* Pods_PhotoBooth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ECF6A573EF0295DB1798496676097C9A /* GoldRaccoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48312C8644609BE7034DB4538625DDAF /* Build configuration list for PBXNativeTarget "GoldRaccoon" */;
+			buildPhases = (
+				9CC2C5F80DB5B0A940E6443FD3A46CCF /* Sources */,
+				525F657236B07CD4D439C923C444CEF8 /* Frameworks */,
+				9173CA7477C8E52109A2628DC519AE9E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldRaccoon;
+			productName = GoldRaccoon;
+			productReference = 9361691CBAF6407047B1CE803898DD2D /* GoldRaccoon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 29483180C4CF6FB086C206B910EEA546 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECF6A573EF0295DB1798496676097C9A /* GoldRaccoon */,
+				8362B6C83F1BC58C2EB1CFD322ACE4B7 /* LLSimpleCamera */,
+				BB27A35EF05FB7E5896BE78BF38CDA79 /* Pods-PhotoBooth */,
+				3C159E35CAE88573877040C479D3C94D /* YYImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03ABB6BA9C2E62FE78A64AA86FA48C6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C9294D707856582CD0236ABBF59DC2B /* YYAnimatedImageView.m in Sources */,
+				E63D5F4B3B9F16FD64FA471E3ADA9CA0 /* YYFrameImage.m in Sources */,
+				AD4C9F3C0633538899B0A0AB9504D90A /* YYImage-dummy.m in Sources */,
+				DF74B8DD0D37B74E44988F4C8E424DE8 /* YYImage.m in Sources */,
+				186BC048D595358894E5FF6A49597345 /* YYImageCoder.m in Sources */,
+				1B5C958E91C61D9CFEEF0EE7E68C91A8 /* YYSpriteSheetImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742035031F96B07271D9959062222209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE1C36C871B6A8E8DEF5F574AFD1C752 /* Pods-PhotoBooth-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789F76D9F27A9844E46A52ED471350BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E68EB2F00A3C2C8952DC9BD01E98606 /* LLSimpleCamera+Helper.m in Sources */,
+				3BC78D6FAB04D260473998D70CA66AE7 /* LLSimpleCamera-dummy.m in Sources */,
+				13C0F65B9E30E388BDA126897DDBFE09 /* LLSimpleCamera.m in Sources */,
+				9FB888285802F376DFE23724131707C6 /* UIImage+FixOrientation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC2C5F80DB5B0A940E6443FD3A46CCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF324C92E2292F79A036E8220C8961E /* GoldRaccoon-dummy.m in Sources */,
+				C60AAD8145190648F842036733BE5710 /* GRCreateDirectoryRequest.m in Sources */,
+				1002F216AA39B195AAE4395B558D9365 /* GRDeleteRequest.m in Sources */,
+				0CCD4595F927197ACDDCEA3C394AC438 /* GRDownloadRequest.m in Sources */,
+				F6F631D8F9B668DF134A0B29D3CBA7C6 /* GRError.m in Sources */,
+				1277FFDB18EBD46968E4CFA4A79EBA28 /* GRListingRequest.m in Sources */,
+				7E535C658C21BA303A0EA1F1946FCD86 /* GRQueue.m in Sources */,
+				860727014E13F98118131DD307FEB826 /* GRRequest.m in Sources */,
+				D07DF3EF79C9BDA3A80ED8C1FBAB7761 /* GRRequestsManager.m in Sources */,
+				853D515FA2BA4327D1C443436F091901 /* GRStreamInfo.m in Sources */,
+				8B1F75E40FA1A74219D67DFEF23D0B3D /* GRUploadRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28E6FA27E869A466FE5DEC5F1B38C7C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYImage;
+			target = 3C159E35CAE88573877040C479D3C94D /* YYImage */;
+			targetProxy = E48325204A003F6039AE8E0DE448DA69 /* PBXContainerItemProxy */;
+		};
+		31D7C80510A1319A99F609D0A2F5C023 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LLSimpleCamera;
+			target = 8362B6C83F1BC58C2EB1CFD322ACE4B7 /* LLSimpleCamera */;
+			targetProxy = 79ADAC0CF3D58A8F57115F61C703AF03 /* PBXContainerItemProxy */;
+		};
+		CF21DC8F3A0497E9B293084939D324BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoldRaccoon;
+			target = ECF6A573EF0295DB1798496676097C9A /* GoldRaccoon */;
+			targetProxy = B0243C0271FAABD1AF61D443720E6415 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1AE432D5068F512644C24F48C4BAACCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB2A366012BD087ABBB184D8DF08074 /* YYImage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYImage/YYImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YYImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YYImage/YYImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = YYImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1DB673419309513BA794DC7062484EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDBA799AD4B865FA276DEA3E95B4E3CE /* LLSimpleCamera.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LLSimpleCamera/LLSimpleCamera-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LLSimpleCamera/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LLSimpleCamera/LLSimpleCamera.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LLSimpleCamera;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		398A2B0E5E5E4EA8654927AE694024E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB2A366012BD087ABBB184D8DF08074 /* YYImage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYImage/YYImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YYImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YYImage/YYImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = YYImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E6F44D2FE7E6AF969B4360177C807E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F89949134E1D26C2036715FC11842FB2 /* GoldRaccoon.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoldRaccoon/GoldRaccoon-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoldRaccoon/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoldRaccoon/GoldRaccoon.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoldRaccoon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5209BEEA3310FB004E6BF9E7A262B6E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F694E578088FC2EC878D146A5F3E8DB3 /* Pods-PhotoBooth.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PhotoBooth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhotoBooth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		87C558666FC611758E504A6C531B521B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CF10B0DC39A8DE7B065D3595E049952 /* Pods-PhotoBooth.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PhotoBooth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhotoBooth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEEE5428401D379B9087D5717F9E3049 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDBA799AD4B865FA276DEA3E95B4E3CE /* LLSimpleCamera.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LLSimpleCamera/LLSimpleCamera-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LLSimpleCamera/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LLSimpleCamera/LLSimpleCamera.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LLSimpleCamera;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DC8FE143D828E1E7D7C9EBC0EE0EFC70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F89949134E1D26C2036715FC11842FB2 /* GoldRaccoon.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoldRaccoon/GoldRaccoon-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoldRaccoon/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoldRaccoon/GoldRaccoon.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoldRaccoon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EA715E6607FEFD9F38C5678F448E136 /* Build configuration list for PBXNativeTarget "Pods-PhotoBooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5209BEEA3310FB004E6BF9E7A262B6E0 /* Debug */,
+				87C558666FC611758E504A6C531B521B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48312C8644609BE7034DB4538625DDAF /* Build configuration list for PBXNativeTarget "GoldRaccoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E6F44D2FE7E6AF969B4360177C807E1 /* Debug */,
+				DC8FE143D828E1E7D7C9EBC0EE0EFC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DB804BE64172A2ABCCAD23455E56107 /* Build configuration list for PBXNativeTarget "LLSimpleCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEEE5428401D379B9087D5717F9E3049 /* Debug */,
+				1DB673419309513BA794DC7062484EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B8F21183511C4345C272998B8371ACE /* Build configuration list for PBXNativeTarget "YYImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AE432D5068F512644C24F48C4BAACCF /* Debug */,
+				398A2B0E5E5E4EA8654927AE694024E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,12 +1,20 @@
 PODS:
+  - GoldRaccoon (1.0.2)
   - LLSimpleCamera (5.0.0)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
 
 DEPENDENCIES:
+  - GoldRaccoon
   - LLSimpleCamera
+  - YYImage
 
 SPEC CHECKSUMS:
+  GoldRaccoon: a9143566afe37c2aba38589512aef83566a52573
   LLSimpleCamera: 7175ccb81be71c83d79933089322eb662b1f0327
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: 818a3de378625152a80af54a6f5ff66908819c2d
+PODFILE CHECKSUM: ffcfb0a348bf6b2a07c8d7e7dc8b436d3c27049e
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

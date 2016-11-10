@@ -1,0 +1,6 @@
+framework module GoldRaccoon {
+  umbrella header "GoldRaccoon-umbrella.h"
+
+  export *
+  module * { export * }
+}
