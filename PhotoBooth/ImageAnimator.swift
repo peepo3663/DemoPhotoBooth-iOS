@@ -28,7 +28,7 @@ class ImageAnimator {
                 PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: videoURL)
             }) { success, error in
                 if !success {
-                    print("Could not save video to photo library:", error)
+                    print("Could not save video to photo library:", error!)
                 }
             }
         }
