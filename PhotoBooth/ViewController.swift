@@ -10,8 +10,14 @@ import UIKit
 import LLSimpleCamera
 import AVFoundation
 import Photos
+import GoldRaccoon
+import YYImage
 
-class ViewController: UIViewController {
+let ftpUsername = "snapshotapp"
+let ftpPassword = "Pipo1234!"
+let ftpURL = "ftp.theblacklist2017.com"
+
+class ViewController: UIViewController, GRRequestsManagerDelegate {
 
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var countdownLabel: UILabel!
@@ -22,16 +28,33 @@ class ViewController: UIViewController {
     private var time = 5
     private var imageToUploads: [PHImage] = []
     
+    private var path: String!
+    
+    private var requestsManager: GRRequestsManager!
+    private var webpEncoder: YYImageEncoder!
+    private var videoRequest: GRDataExchangeRequestProtocol?
+    
     deinit {
         myTimer?.invalidate()
         self.myTimer = nil
         self.resetUICamera()
         self.imageToUploads.removeAll()
+        if self.requestsManager != nil {
+            self.requestsManager.stopAndCancelAllRequests()
+            self.requestsManager = nil
+        }
+        if webpEncoder != nil {
+            webpEncoder = nil
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.requestsManager = GRRequestsManager(hostname: ftpURL, user: ftpUsername, password: ftpPassword)
+        self.requestsManager.delegate = self
+        self.webpEncoder = YYImageEncoder(type: .GIF)
+        webpEncoder.loopCount = 5
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -107,7 +130,6 @@ class ViewController: UIViewController {
                         self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.updateLabel(timer:)), userInfo: nil, repeats: false)
                     } else {
                         // 5 images upload and reset
-                        self.saveImageToPhotosAlbum()
                         var settings = RenderSettings()
                         let firstImage = self.imageToUploads.first!
                         settings.width = firstImage.adjustedImage.size.width
@@ -115,8 +137,7 @@ class ViewController: UIViewController {
                         settings.fps = 1
                         let imageAnimator = ImageAnimator(renderSettings: settings, images: self.imageToUploads)
                         imageAnimator.render() {
-                            self.removeAllImages()
-                            self.resetUICamera()
+                            self.ftpUploadVideofile(imageAnimator: imageAnimator)
                         }
                     }
                 }
@@ -128,6 +149,83 @@ class ViewController: UIViewController {
         for imageCapture in imageToUploads {
             UIImageWriteToSavedPhotosAlbum(imageCapture.originalImage, self, #selector(saveImage(_:didFinishSavingWithError:contextInfo:)), nil)
         }
+    }
+    
+    func ftpUploadVideofile(imageAnimator: ImageAnimator) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYYMMdd_HHmmss"
+        let folderName = dateFormatter.string(from: Date())
+        self.path = "/\(folderName)"
+        let filePath = self.path + "/\(imageAnimator.settings.videoFilename).\(imageAnimator.settings.videoFilenameExt)"
+        requestsManager.addRequestForCreateDirectory(atPath: path)
+        self.videoRequest = requestsManager.addRequestForUploadFile(atLocalPath: imageAnimator.settings.outputURL.path, toRemotePath: filePath)
+        requestsManager.startProcessingRequests()
+    }
+    
+    func ftpUploadImagefiles(path: String) {
+        removeAllTempFiles()
+        for i in 0 ..< imageToUploads.count {
+            let image = imageToUploads[i].adjustedImage
+            let fileURL = self.fileImages(i + 1)
+            if let imageRawData = UIImageJPEGRepresentation(image!, 1) {
+                do {
+                    try imageRawData.write(to: fileURL)
+                } catch _ {
+                    continue
+                }
+                let filePath = "\(path)/jpg-\(i + 1).jpg"
+                requestsManager.addRequestForUploadFile(atLocalPath: fileURL.path, toRemotePath: filePath)
+            } else {
+                continue
+            }
+        }
+        self.exportGifFile(path: path)
+    }
+    
+    func removeAllTempFiles() {
+        ImageAnimator.removeFileAtURL(fileURL: self.gifFileImage())
+        for i in 1 ... 5 {
+            ImageAnimator.removeFileAtURL(fileURL: self.fileImages(i))
+        }
+    }
+    
+    func exportGifFile(path: String) {
+        for i in 0 ..< imageToUploads.count {
+            let image = imageToUploads[i].adjustedImage
+            webpEncoder.add(image!, duration: 1.0)
+        }
+        if let gifData = webpEncoder.encode() {
+            let gifFileURL = self.gifFileImage()
+            do {
+                try gifData.write(to: gifFileURL)
+            } catch {
+                //gif fail upload others
+                requestsManager.startProcessingRequests()
+                return
+            }
+            let filePath = "\(path)/animateGIF.gif"
+            requestsManager.addRequestForUploadFile(atLocalPath: gifFileURL.path, toRemotePath: filePath)
+        }
+        self.saveImageToPhotosAlbum()
+        self.requestsManager.startProcessingRequests()
+    }
+    
+    func gifFileImage() -> URL {
+        let fileManager = FileManager.default
+        if let tmpDirURL = try? fileManager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true) {
+            return tmpDirURL.appendingPathComponent("animateGIF").appendingPathExtension("gif")
+        }
+        fatalError("URLForDirectory() failed")
+    }
+    
+    func fileImages(_ index: Int) -> URL {
+        // Use the CachesDirectory so the rendered video file sticks around as long as we need it to.
+        // Using the CachesDirectory ensures the file won't be included in a backup of the app.
+        let fileManager = FileManager.default
+        if let tmpDirURL = try? fileManager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true) {
+            return tmpDirURL.appendingPathComponent("jpg-\(index)").appendingPathExtension("jpg")
+        }
+        fatalError("URLForDirectory() failed")
     }
     
     func saveImage(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
@@ -172,6 +270,37 @@ class ViewController: UIViewController {
             previewViewController.removeFromParentViewController()
         }
         self.previewViewController = nil
+    }
+    
+    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didFailRequest request: GRRequestProtocol!, withError error: Error!) {
+        //fail by request
+    }
+    
+    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didCompleteUploadRequest request: GRDataExchangeRequestProtocol!) {
+        //all upload
+        if let videoRequest = videoRequest {
+            if request.isEqual(videoRequest) {
+                self.ftpUploadImagefiles(path: self.path)
+                self.videoRequest = nil
+            }
+        }
+    }
+    
+    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didFailWritingFileAtPath path: String!, forRequest request: GRDataExchangeRequestProtocol!, error: Error!) {
+        //fail write path
+    }
+    
+    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didCompletePercent percent: Float, forRequest request: GRRequestProtocol!) {
+        //show percent
+    }
+    
+    func requestsManagerDidCompleteQueue(_ requestsManager: GRRequestsManagerProtocol!) {
+        //queue empty
+        self.path = nil
+        DispatchQueue.main.async {
+            self.removeAllImages()
+            self.resetUICamera()
+        }
     }
 }
 
