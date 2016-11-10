@@ -7,13 +7,16 @@ target 'PhotoBooth' do
 
   # Pods for PhotoBooth
   # pod 'NextLevel', '~> 0.0.1'
-  pod 'LLSimpleCamera'
+    pod 'LLSimpleCamera'
+#  pod 'rebekka'
+    pod 'GoldRaccoon'
+    pod 'YYImage'
 end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings['SWIFT_VERSION'] = '3.0'
+        config.build_settings['SWIFT_VERSION'] = '3.0'
     end
   end
 end

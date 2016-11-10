@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7918E73770076C2DF31AAD3A49D3A797349F6B8E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3ED8709E7B503727D90538A3F0CDD45A01DA08D0" : 9223372036854775807,
+    "7918E73770076C2DF31AAD3A49D3A797349F6B8E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E1BA3310-37F6-4BF4-935B-41F6D3857736",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3ED8709E7B503727D90538A3F0CDD45A01DA08D0" : "PhotoBooth\/PhotoBooth\/Kits\/rebekka\/",
+    "7918E73770076C2DF31AAD3A49D3A797349F6B8E" : "PhotoBooth\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PhotoBooth",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PhotoBooth.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Constantine-Fry\/rebekka.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3ED8709E7B503727D90538A3F0CDD45A01DA08D0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/peepo3663\/DemoPhotoBooth-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7918E73770076C2DF31AAD3A49D3A797349F6B8E"
+    }
+  ]
+}
