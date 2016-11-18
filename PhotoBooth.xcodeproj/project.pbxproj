@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4789BCFC0739DFA808F8A38A /* Pods_PhotoBooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E7526D03876848EDE3C62B /* Pods_PhotoBooth.framework */; };
+		7A6BAFD01DD8507900018638 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BAFCF1DD8507900018638 /* ImageManager.swift */; };
 		7A7099911DB8EEB00066CB1E /* RenderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7099901DB8EEB00066CB1E /* RenderSettings.swift */; };
 		7A7099931DB8EF4F0066CB1E /* ImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7099921DB8EF4F0066CB1E /* ImageAnimator.swift */; };
 		7A7099951DB8EF6C0066CB1E /* VideoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7099941DB8EF6C0066CB1E /* VideoWriter.swift */; };
@@ -24,9 +25,12 @@
 		40E7526D03876848EDE3C62B /* Pods_PhotoBooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoBooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D57E62FD13A62FC6CEF2DA5 /* Pods-PhotoBooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBooth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth.debug.xcconfig"; sourceTree = "<group>"; };
 		7A69966F1DAF8B2C00E71CA3 /* PhotoBooth-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PhotoBooth-Bridging.h"; path = "PhotoBooth/PhotoBooth-Bridging.h"; sourceTree = SOURCE_ROOT; };
+		7A6BAFCF1DD8507900018638 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		7A6BAFD11DD856BC00018638 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		7A7099901DB8EEB00066CB1E /* RenderSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderSettings.swift; sourceTree = "<group>"; };
 		7A7099921DB8EF4F0066CB1E /* ImageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAnimator.swift; sourceTree = "<group>"; };
 		7A7099941DB8EF6C0066CB1E /* VideoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoWriter.swift; sourceTree = "<group>"; };
+		7A91AA591DD8575A0031043A /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		7ABB46F51DAF6BB500E57A80 /* PhotoBooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABB46F81DAF6BB500E57A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ABB46FA1DAF6BB500E57A80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			children = (
 				7ABB46F81DAF6BB500E57A80 /* AppDelegate.swift */,
 				7ABB46FA1DAF6BB500E57A80 /* ViewController.swift */,
+				7A6BAFCF1DD8507900018638 /* ImageManager.swift */,
 				7ABB46FC1DAF6BB500E57A80 /* Main.storyboard */,
 				7ABB46FF1DAF6BB500E57A80 /* Assets.xcassets */,
 				7ABB47011DAF6BB500E57A80 /* LaunchScreen.storyboard */,
@@ -88,6 +93,8 @@
 		EF5FD2EE839A158881DBC01C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A91AA591DD8575A0031043A /* PhotosUI.framework */,
+				7A6BAFD11DD856BC00018638 /* Photos.framework */,
 				40E7526D03876848EDE3C62B /* Pods_PhotoBooth.framework */,
 			);
 			name = Frameworks;
@@ -115,6 +122,7 @@
 				7ABB46F31DAF6BB500E57A80 /* Resources */,
 				54F98CD24A3F627AC4C5A233 /* [CP] Embed Pods Frameworks */,
 				CFC07A47D931B3B765B0F0C6 /* [CP] Copy Pods Resources */,
+				7AA995C41DDEF3C2004DF679 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -189,6 +197,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoBooth/Pods-PhotoBooth-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7AA995C41DDEF3C2004DF679 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" d06b5fb31f5af9a18bce41d906c4be4c88fe9dc4 f7af6bf406d070b8ca96a881480995722135e40330be3f7bafb2aba08a92c493";
+		};
 		872E25A0D710EFCFA9EC5F96 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +249,7 @@
 			files = (
 				7A7099951DB8EF6C0066CB1E /* VideoWriter.swift in Sources */,
 				7A7099931DB8EF4F0066CB1E /* ImageAnimator.swift in Sources */,
+				7A6BAFD01DD8507900018638 /* ImageManager.swift in Sources */,
 				7ABB46FB1DAF6BB500E57A80 /* ViewController.swift in Sources */,
 				7AFECD9B1DBA13AB0058A759 /* PHImage.swift in Sources */,
 				7ABB46F91DAF6BB500E57A80 /* AppDelegate.swift in Sources */,
@@ -357,6 +379,7 @@
 			baseConfigurationReference = 6D57E62FD13A62FC6CEF2DA5 /* Pods-PhotoBooth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9U7GB28537;
 				INFOPLIST_FILE = PhotoBooth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -375,6 +398,7 @@
 			baseConfigurationReference = 017C6C091B937D3D25E503EA /* Pods-PhotoBooth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9U7GB28537;
 				INFOPLIST_FILE = PhotoBooth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

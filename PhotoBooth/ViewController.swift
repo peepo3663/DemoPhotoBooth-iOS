@@ -17,9 +17,10 @@ let ftpUsername = "snapshotapp"
 let ftpPassword = "Pipo1234!"
 let ftpURL = "ftp.theblacklist2017.com"
 
-class ViewController: UIViewController, GRRequestsManagerDelegate {
+class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var pickedImageButton: UIButton!
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var finishLabel: UILabel!
     
@@ -33,6 +34,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate {
     private var requestsManager: GRRequestsManager!
     private var webpEncoder: YYImageEncoder!
     private var videoRequest: GRDataExchangeRequestProtocol?
+    private var imagePickerViewController: UIImagePickerController?
     
     deinit {
         myTimer?.invalidate()
@@ -44,7 +46,10 @@ class ViewController: UIViewController, GRRequestsManagerDelegate {
             self.requestsManager = nil
         }
         if webpEncoder != nil {
-            webpEncoder = nil
+            self.webpEncoder = nil
+        }
+        if imagePickerViewController != nil {
+            self.imagePickerViewController = nil
         }
     }
     
@@ -85,12 +90,21 @@ class ViewController: UIViewController, GRRequestsManagerDelegate {
         self.resetUICamera()
         self.imageToUploads.removeAll()
     }
+    
+    @IBAction func pickImageWatermark(_ sender: UIButton) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        self.imagePickerViewController = imagePickerController
+        self.present(self.imagePickerViewController!, animated: true, completion: nil)
+    }
 
     @IBAction func startTouchUpInside(_ sender: AnyObject) {
         if let senderButton = sender as? UIButton {
             if startButton == senderButton {
                 attachCameraAndStart(shouldStart: true, sizeToDisplay: UIScreen.main.bounds.size)
                 startButton.isHidden = true
+                pickedImageButton.isHidden = true
                 countdownLabel.isHidden = false
                 finishLabel.isHidden = true
                 self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateLabel(timer:)), userInfo: nil, repeats: false)
@@ -125,6 +139,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate {
                         // continue
                         self.time = 5
                         self.startButton.isHidden = true
+                        self.pickedImageButton.isHidden = false
                         self.countdownLabel.isHidden = false
                         self.countdownLabel.text = "5"
                         self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.updateLabel(timer:)), userInfo: nil, repeats: false)
@@ -260,6 +275,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate {
     func resetUICamera() {
         countdownLabel.text = "5"
         startButton.isHidden = false
+        pickedImageButton.isHidden = false
         countdownLabel.isHidden = true
         finishLabel.isHidden = false
         time = 5
@@ -271,6 +287,8 @@ class ViewController: UIViewController, GRRequestsManagerDelegate {
         }
         self.previewViewController = nil
     }
+    
+    // MARK: - GRRequestManagerDelegate
     
     func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didFailRequest request: GRRequestProtocol!, withError error: Error!) {
         //fail by request
@@ -302,5 +320,44 @@ class ViewController: UIViewController, GRRequestsManagerDelegate {
             self.resetUICamera()
         }
     }
+    
+    // MARK: - ImagePickerViewControllerDelegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        //cancel
+        if picker == self.imagePickerViewController {
+            picker.dismiss(animated: true, completion: nil)
+            self.imagePickerViewController = nil
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        //picked
+        if self.imagePickerViewController == picker {
+            guard let imagePicked = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+                picker.dismiss(animated: true, completion: nil)
+                self.imagePickerViewController = nil
+                return
+            }
+            ImageManager.sharedInstance.setWaterMarkImage(imagePicked)
+            picker.dismiss(animated: true, completion: {
+                self.imagePickerViewController = nil
+            })
+        }
+    }
+    
+//    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+//        //picked
+//        if self.imagePickerViewController == picker {
+//            guard let imagePicked = info[UIImagePickerControllerEditedImage] as? UIImage else {
+//                picker.dismiss(animated: true, completion: nil)
+//                self.imagePickerViewController = nil
+//                return
+//            }
+//            ImageManager.sharedInstance.setWaterMarkImage(imagePicked)
+//            picker.dismiss(animated: true, completion: { 
+//                self.imagePickerViewController = nil
+//            })
+//        }
+//    }
 }
 

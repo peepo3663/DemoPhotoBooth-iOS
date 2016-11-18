@@ -24,10 +24,11 @@ class PHImage {
     
     private func processAdjustedImage(_ image: UIImage) {
         //TODO add watermark
-        self.fixrotation(image)
+        let fixedRotationImage = self.fixrotation(image)
+        self.applyWatermarkIfNeed(fixedRotationImage)
     }
 
-    private func fixrotation(_ image: UIImage) {
+    private func fixrotation(_ image: UIImage) -> UIImage {
         let targetWidth = image.size.width
         let targetHeight = image.size.height
         
@@ -63,13 +64,27 @@ class PHImage {
         }
         bitmap.draw(imageRef, in: CGRect(x: 0,y: 0,width: targetWidth,height: targetHeight))
         
-        let ref = bitmap.makeImage()
-        let newImage = UIImage(cgImage: ref!)
+        let ref = bitmap.makeImage()!
+        let newImage = UIImage(cgImage: ref)
         
-        self.adjustedImage = newImage
+        return newImage
     }
     
     class func radians(_ degrees: Double) -> Double {
         return degrees * M_PI/180.0
+    }
+    
+    private func applyWatermarkIfNeed(_ image: UIImage) {
+        if ImageManager.sharedInstance.hasWaterMarkImage() {
+            UIGraphicsBeginImageContext(image.size)
+            image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+            ImageManager.sharedInstance.waterMarkImage!.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+            let result = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            self.adjustedImage = result
+        } else {
+            //no watermark
+            self.adjustedImage = image
+        }
     }
 }

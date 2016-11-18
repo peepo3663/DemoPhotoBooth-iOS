@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,16 +21,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37C-kc-9GG">
+                                <rect key="frame" x="310" y="35" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="YQw-PC-YnJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="sti-6a-I44"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pickImageWatermark:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfw-GW-cU6"/>
+                                </connections>
+                            </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-i2-ZCx">
+                                <rect key="frame" x="131.5" y="515.5" width="112" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoP-Ex-QFb">
+                                <rect key="frame" x="166.5" y="290.5" width="42.5" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXW-Um-XVV">
+                                <rect key="frame" x="142.5" y="559.5" width="90" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,6 +64,8 @@
                             <constraint firstItem="KoP-Ex-QFb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9WO-V2-xZn"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="top" secondItem="Lbo-i2-ZCx" secondAttribute="bottom" constant="8" id="Nwl-PZ-w6k"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SY6-MP-Xkz"/>
+                            <constraint firstItem="37C-kc-9GG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="X1F-LQ-z1b"/>
+                            <constraint firstAttribute="trailing" secondItem="37C-kc-9GG" secondAttribute="trailing" constant="15" id="cJk-lP-eLe"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="foR-EY-c4E"/>
                             <constraint firstItem="Lbo-i2-ZCx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8M-Ya-E8O"/>
                             <constraint firstItem="KoP-Ex-QFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uao-9f-JgT"/>
@@ -51,6 +74,7 @@
                     <connections>
                         <outlet property="countdownLabel" destination="KoP-Ex-QFb" id="wwJ-LD-IMI"/>
                         <outlet property="finishLabel" destination="Lbo-i2-ZCx" id="UxB-jS-egJ"/>
+                        <outlet property="pickedImageButton" destination="37C-kc-9GG" id="2E5-Ve-2Hz"/>
                         <outlet property="startButton" destination="JXW-Um-XVV" id="csb-zq-DIW"/>
                     </connections>
                 </viewController>

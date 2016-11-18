@@ -4,13 +4,15 @@ platform :ios, '9.0'
 target 'PhotoBooth' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for PhotoBooth
-  # pod 'NextLevel', '~> 0.0.1'
+# Pods for PhotoBooth
+# pod 'NextLevel', '~> 0.0.1'
     pod 'LLSimpleCamera'
-#  pod 'rebekka'
+    #  pod 'rebekka'
     pod 'GoldRaccoon'
     pod 'YYImage'
+    # Crashlytics
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 post_install do |installer|
