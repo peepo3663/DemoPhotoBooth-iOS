@@ -12,6 +12,7 @@ import AVFoundation
 import Photos
 import GoldRaccoon
 import YYImage
+//import AssetsLibrary
 
 let ftpUsername = "snapshotapp"
 let ftpPassword = "Pipo1234!"
@@ -139,7 +140,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
                         // continue
                         self.time = 5
                         self.startButton.isHidden = true
-                        self.pickedImageButton.isHidden = false
+                        self.pickedImageButton.isHidden = true
                         self.countdownLabel.isHidden = false
                         self.countdownLabel.text = "5"
                         self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.updateLabel(timer:)), userInfo: nil, repeats: false)
@@ -161,9 +162,19 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
     }
     
     func saveImageToPhotosAlbum() {
-        for imageCapture in imageToUploads {
-            UIImageWriteToSavedPhotosAlbum(imageCapture.originalImage, self, #selector(saveImage(_:didFinishSavingWithError:contextInfo:)), nil)
+//        for imageCapture in imageToUploads {
+        for (_, value) in imageToUploads.enumerated() {
+            UIImageWriteToSavedPhotosAlbum(value.originalImage, self, #selector(saveImage(_:didFinishSavingWithError:contextInfo:)), nil)
+            sleep(1)
         }
+//        let library = ALAssetsLibrary()
+//        let queue = DispatchQueue(label: "co.uniqorn.PhotoBooth.saveToCameraRoll")
+//        for (index, value) in imageToUploads.enumerated() {
+//            queue.async {
+//                let sema = DispatchSemaphore(value: 0)
+//                library.writeImage(toSavedPhotosAlbum: value.originalImage.cgImage!, metadata: <#T##[AnyHashable : Any]!#>, completionBlock: <#T##ALAssetsLibraryWriteImageCompletionBlock!##ALAssetsLibraryWriteImageCompletionBlock!##(URL?, Error?) -> Void#>)
+//            }
+//        }
     }
     
     func ftpUploadVideofile(imageAnimator: ImageAnimator) {
