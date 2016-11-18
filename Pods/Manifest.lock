@@ -1,4 +1,7 @@
 PODS:
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
   - GoldRaccoon (1.0.2)
   - LLSimpleCamera (5.0.0)
   - YYImage (1.0.4):
@@ -6,15 +9,19 @@ PODS:
   - YYImage/Core (1.0.4)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - GoldRaccoon
   - LLSimpleCamera
   - YYImage
 
 SPEC CHECKSUMS:
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   GoldRaccoon: a9143566afe37c2aba38589512aef83566a52573
   LLSimpleCamera: 7175ccb81be71c83d79933089322eb662b1f0327
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: ffcfb0a348bf6b2a07c8d7e7dc8b436d3c27049e
+PODFILE CHECKSUM: cbed91dda403457fec9210d1ae2f2d03adba50bd
 
 COCOAPODS: 1.1.1
