@@ -193,13 +193,13 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
         for i in 0 ..< imageToUploads.count {
             let image = imageToUploads[i].adjustedImage
             let fileURL = self.fileImages(i + 1)
-            if let imageRawData = UIImageJPEGRepresentation(image!, 1) {
+            if let imageRawData = UIImagePNGRepresentation(image!) {
                 do {
-                    try imageRawData.write(to: fileURL)
+                    try imageRawData.write(to: fileURL, options: .atomic)
                 } catch _ {
                     continue
                 }
-                let filePath = "\(path)/jpg-\(i + 1).jpg"
+                let filePath = "\(path)/png-\(i + 1).png"
                 requestsManager.addRequestForUploadFile(atLocalPath: fileURL.path, toRemotePath: filePath)
             } else {
                 continue
@@ -249,7 +249,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
         // Using the CachesDirectory ensures the file won't be included in a backup of the app.
         let fileManager = FileManager.default
         if let tmpDirURL = try? fileManager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true) {
-            return tmpDirURL.appendingPathComponent("jpg-\(index)").appendingPathExtension("jpg")
+            return tmpDirURL.appendingPathComponent("png-\(index)").appendingPathExtension("png")
         }
         fatalError("URLForDirectory() failed")
     }
@@ -309,8 +309,8 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
         //all upload
         if let videoRequest = videoRequest {
             if request.isEqual(videoRequest) {
-                self.ftpUploadImagefiles(path: self.path)
                 self.videoRequest = nil
+                self.ftpUploadImagefiles(path: self.path)
             }
         }
     }
