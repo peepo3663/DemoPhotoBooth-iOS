@@ -218,7 +218,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
             self.webpEncoder = nil
         }
         self.webpEncoder = YYImageEncoder(type: .GIF)
-        webpEncoder.loopCount = 5
+        webpEncoder.loopCount = 1
         for i in 0 ..< imageToUploads.count {
             let image = imageToUploads[i].adjustedImage
             webpEncoder.add(image!, duration: 1.0)
