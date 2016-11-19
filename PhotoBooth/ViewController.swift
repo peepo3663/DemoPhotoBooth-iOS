@@ -59,8 +59,6 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
         // Do any additional setup after loading the view, typically from a nib.
         self.requestsManager = GRRequestsManager(hostname: ftpURL, user: ftpUsername, password: ftpPassword)
         self.requestsManager.delegate = self
-        self.webpEncoder = YYImageEncoder(type: .GIF)
-        webpEncoder.loopCount = 5
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -216,6 +214,11 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
     }
     
     func exportGifFile(path: String) {
+        if webpEncoder != nil {
+            self.webpEncoder = nil
+        }
+        self.webpEncoder = YYImageEncoder(type: .GIF)
+        webpEncoder.loopCount = 5
         for i in 0 ..< imageToUploads.count {
             let image = imageToUploads[i].adjustedImage
             webpEncoder.add(image!, duration: 1.0)
@@ -296,6 +299,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
             previewViewController.view.removeFromSuperview()
             previewViewController.removeFromParentViewController()
         }
+        self.webpEncoder = nil
         self.previewViewController = nil
     }
     
