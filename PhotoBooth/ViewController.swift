@@ -52,6 +52,9 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
         if imagePickerViewController != nil {
             self.imagePickerViewController = nil
         }
+        if self.path != nil {
+            self.path = nil
+        }
     }
     
     override func viewDidLoad() {
@@ -115,10 +118,8 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
         countdownLabel.text = "\(time)"
         time = time - 1
         if time == 0 {
-            if myTimer != nil {
-                myTimer!.invalidate()
-                self.myTimer = nil
-            }
+            myTimer?.invalidate()
+            self.myTimer = nil
             self.perform(#selector(resetTimer), with: nil, afterDelay: 1.0)
         } else {
             self.myTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateLabel(timer:)), userInfo: nil, repeats: false)
@@ -188,23 +189,27 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
     
     func ftpUploadImagefiles(path: String) {
         removeAllTempFiles()
-        for i in 0 ..< imageToUploads.count {
-            let image = imageToUploads[i].adjustedImage
-            let fileURL = self.fileImages(i + 1)
+        for (index, value) in imageToUploads.enumerated() {
+            let image = value.adjustedImage
+            let fileURL = self.fileImages(index + 1)
+            // Save image to Document directory
             if let imageRawData = UIImagePNGRepresentation(image!) {
-                do {
-                    try imageRawData.write(to: fileURL, options: .atomic)
-                } catch _ {
+                let success = FileManager.default.createFile(atPath: fileURL.path, contents: imageRawData, attributes: nil)
+                if success {
+                    let filePath = "\(path)/png-\(index + 1).png"
+                    requestsManager.addRequestForUploadFile(atLocalPath: fileURL.path, toRemotePath: filePath)
+                } else {
+                    //fail writing file
                     continue
                 }
-                sleep(1)
-                let filePath = "\(path)/png-\(i + 1).png"
-                requestsManager.addRequestForUploadFile(atLocalPath: fileURL.path, toRemotePath: filePath)
             } else {
+                //fail data
                 continue
             }
+            if value.adjustedImage == imageToUploads.last?.adjustedImage {
+                self.exportGifFile(path: path)
+            }
         }
-        self.exportGifFile(path: path)
     }
     
     func removeAllTempFiles() {
@@ -226,16 +231,22 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
         }
         if let gifData = webpEncoder.encode() {
             let gifFileURL = self.gifFileImage()
-            do {
-                try gifData.write(to: gifFileURL)
-            } catch {
+            let success = FileManager.default.createFile(atPath: gifFileURL.path, contents: gifData, attributes: nil)
+            if success {
+                let filePath = "\(path)/animateGIF.gif"
+                requestsManager.addRequestForUploadFile(atLocalPath: gifFileURL.path, toRemotePath: filePath)
+            } else {
                 //gif fail upload others
                 requestsManager.startProcessingRequests()
-                return
             }
-            sleep(1)
-            let filePath = "\(path)/animateGIF.gif"
-            requestsManager.addRequestForUploadFile(atLocalPath: gifFileURL.path, toRemotePath: filePath)
+//            do {
+//                try gifData.write(to: gifFileURL)
+//            } catch {
+//                //gif fail upload others
+//                requestsManager.startProcessingRequests()
+//                return
+//            }
+//            sleep(1)
         }
         self.saveImageToPhotosAlbum()
         self.requestsManager.startProcessingRequests()
@@ -331,7 +342,6 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
     
     func requestsManagerDidCompleteQueue(_ requestsManager: GRRequestsManagerProtocol!) {
         //queue empty
-        self.path = nil
         DispatchQueue.main.async {
             self.removeAllImages()
             self.resetUICamera()
