@@ -197,6 +197,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
                 } catch _ {
                     continue
                 }
+                sleep(1)
                 let filePath = "\(path)/png-\(i + 1).png"
                 requestsManager.addRequestForUploadFile(atLocalPath: fileURL.path, toRemotePath: filePath)
             } else {
@@ -218,9 +219,9 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
             self.webpEncoder = nil
         }
         self.webpEncoder = YYImageEncoder(type: .GIF)
-        webpEncoder.loopCount = 1
-        for i in 0 ..< imageToUploads.count {
-            let image = imageToUploads[i].adjustedImage
+        webpEncoder.loopCount = 5
+        for (_, value) in imageToUploads.enumerated() {
+            let image = value.adjustedImage
             webpEncoder.add(image!, duration: 1.0)
         }
         if let gifData = webpEncoder.encode() {
@@ -232,6 +233,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
                 requestsManager.startProcessingRequests()
                 return
             }
+            sleep(1)
             let filePath = "\(path)/animateGIF.gif"
             requestsManager.addRequestForUploadFile(atLocalPath: gifFileURL.path, toRemotePath: filePath)
         }
