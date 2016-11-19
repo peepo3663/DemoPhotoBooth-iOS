@@ -24,11 +24,11 @@ class PHImage {
     
     private func processAdjustedImage(_ image: UIImage) {
         //TODO add watermark
-        let fixedRotationImage = self.fixrotation(image)
-        self.applyWatermarkIfNeed(fixedRotationImage)
+        let waterMarkImage = self.applyWatermarkIfNeed(image)
+        self.fixrotation(waterMarkImage)
     }
 
-    private func fixrotation(_ image: UIImage) -> UIImage {
+    private func fixrotation(_ image: UIImage) {
         let targetWidth = image.size.width
         let targetHeight = image.size.height
         
@@ -67,24 +67,25 @@ class PHImage {
         let ref = bitmap.makeImage()!
         let newImage = UIImage(cgImage: ref)
         
-        return newImage
+        self.adjustedImage = newImage
     }
     
     class func radians(_ degrees: Double) -> Double {
         return degrees * M_PI/180.0
     }
     
-    private func applyWatermarkIfNeed(_ image: UIImage) {
+    private func applyWatermarkIfNeed(_ image: UIImage) -> UIImage {
         if ImageManager.sharedInstance.hasWaterMarkImage() {
-            UIGraphicsBeginImageContext(image.size)
-            image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
-            ImageManager.sharedInstance.waterMarkImage!.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
-            let result = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsBeginImageContextWithOptions(image.size, false, 0.0)
+            let areaSize = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+            image.draw(in: areaSize)
+            ImageManager.sharedInstance.waterMarkImage!.draw(in: areaSize, blendMode: .normal, alpha: 1.0)
+            let result = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
-            self.adjustedImage = result
+            return result
         } else {
             //no watermark
-            self.adjustedImage = image
+            return image
         }
     }
 }
