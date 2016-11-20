@@ -10,15 +10,16 @@ import UIKit
 import LLSimpleCamera
 import AVFoundation
 import Photos
-import GoldRaccoon
+//import GoldRaccoon
 import YYImage
+import LxFTPRequest
 //import AssetsLibrary
 
 let ftpUsername = "snapshotapp"
 let ftpPassword = "Pipo1234!"
-let ftpURL = "ftp.theblacklist2017.com"
+let ftpURL = "ftp://ftp.theblacklist2017.com"
 
-class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pickedImageButton: UIButton!
@@ -32,20 +33,22 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
     
     private var path: String!
     
-    private var requestsManager: GRRequestsManager!
+//    private var requestsManager: GRRequestsManager!
     private var webpEncoder: YYImageEncoder!
-    private var videoRequest: GRDataExchangeRequestProtocol?
+//    private var videoRequest: GRDataExchangeRequestProtocol?
+//    private var gifRequest: GRDataExchangeRequestProtocol?
     private var imagePickerViewController: UIImagePickerController?
     
     deinit {
         myTimer?.invalidate()
         self.myTimer = nil
+        self.removeAllImages()
         self.resetUICamera()
         self.imageToUploads.removeAll()
-        if self.requestsManager != nil {
-            self.requestsManager.stopAndCancelAllRequests()
-            self.requestsManager = nil
-        }
+//        if self.requestsManager != nil {
+//            self.requestsManager.stopAndCancelAllRequests()
+//            self.requestsManager = nil
+//        }
         if webpEncoder != nil {
             self.webpEncoder = nil
         }
@@ -60,8 +63,8 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.requestsManager = GRRequestsManager(hostname: ftpURL, user: ftpUsername, password: ftpPassword)
-        self.requestsManager.delegate = self
+//        self.requestsManager = GRRequestsManager(hostname: ftpURL, user: ftpUsername, password: ftpPassword)
+//        self.requestsManager.delegate = self
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -153,6 +156,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
                         let imageAnimator = ImageAnimator(renderSettings: settings, images: self.imageToUploads)
                         imageAnimator.render() {
                             self.ftpUploadVideofile(imageAnimator: imageAnimator)
+                            
                         }
                     }
                 }
@@ -180,15 +184,26 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYYMMdd_HHmmss"
         let folderName = dateFormatter.string(from: Date())
-        self.path = "/\(folderName)"
-        let filePath = self.path + "/\(imageAnimator.settings.videoFilename).\(imageAnimator.settings.videoFilenameExt)"
-        requestsManager.addRequestForCreateDirectory(atPath: path)
-        self.videoRequest = requestsManager.addRequestForUploadFile(atLocalPath: imageAnimator.settings.outputURL.path, toRemotePath: filePath)
-        requestsManager.startProcessingRequests()
+        self.path = "/\(folderName)/"
+        let filePath = self.path + "\(imageAnimator.settings.videoFilename).\(imageAnimator.settings.videoFilenameExt)"
+        self.ftpCreateDirectory(path: self.path, completion: {
+            success in
+            if success {
+                self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
+                    if success {
+                        self.ftpUploadFile(localFileURL: imageAnimator.settings.outputURL, filePath: filePath, completion: { (success) in
+                            self.exportGifFile(path: self.path)
+                        })
+                    }
+                })
+            }
+        })
+//        requestsManager.addRequestForCreateDirectory(atPath: path)
+//        self.videoRequest = requestsManager.addRequestForUploadFile(atLocalPath: imageAnimator.settings.outputURL.path, toRemotePath: filePath)
+//        requestsManager.startProcessingRequests()
     }
     
     func ftpUploadImagefiles(path: String) {
-        removeAllTempFiles()
         for (index, value) in imageToUploads.enumerated() {
             let image = value.adjustedImage
             let fileURL = self.fileImages(index + 1)
@@ -196,18 +211,21 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
             if let imageRawData = UIImagePNGRepresentation(image!) {
                 let success = FileManager.default.createFile(atPath: fileURL.path, contents: imageRawData, attributes: nil)
                 if success {
-                    let filePath = "\(path)/png-\(index + 1).png"
-                    requestsManager.addRequestForUploadFile(atLocalPath: fileURL.path, toRemotePath: filePath)
-                } else {
-                    //fail writing file
-                    continue
+                    let filePath = "\(path)png-\(index + 1).png"
+                    self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
+                        if success {
+                            self.ftpUploadFile(localFileURL: fileURL, filePath: filePath, completion: { (success) in
+                                if value.adjustedImage == self.imageToUploads.last?.adjustedImage {
+                                    DispatchQueue.main.async {
+                                        self.saveImageToPhotosAlbum()
+                                        self.removeAllImages()
+                                        self.resetUICamera()
+                                    }
+                                }
+                            })
+                        }
+                    })
                 }
-            } else {
-                //fail data
-                continue
-            }
-            if value.adjustedImage == imageToUploads.last?.adjustedImage {
-                self.exportGifFile(path: path)
             }
         }
     }
@@ -220,6 +238,7 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
     }
     
     func exportGifFile(path: String) {
+        removeAllTempFiles()
         if webpEncoder != nil {
             self.webpEncoder = nil
         }
@@ -231,25 +250,22 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
         }
         if let gifData = webpEncoder.encode() {
             let gifFileURL = self.gifFileImage()
-            let success = FileManager.default.createFile(atPath: gifFileURL.path, contents: gifData, attributes: nil)
-            if success {
-                let filePath = "\(path)/animateGIF.gif"
-                requestsManager.addRequestForUploadFile(atLocalPath: gifFileURL.path, toRemotePath: filePath)
-            } else {
-                //gif fail upload others
-                requestsManager.startProcessingRequests()
+                let success = FileManager.default.createFile(atPath: gifFileURL.path, contents: gifData, attributes: nil)
+                if success {
+                    let filePath = "\(path)animateGIF.gif"
+                    self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
+                        if success {
+                            self.ftpUploadFile(localFileURL: gifFileURL, filePath: filePath, completion: { (success) in
+                                self.ftpUploadImagefiles(path: path)
+                            })
+                        }
+                    })
+                } else {
+                    //gif fail upload others
+                    self.ftpUploadImagefiles(path: path)
+                    return
+                }
             }
-//            do {
-//                try gifData.write(to: gifFileURL)
-//            } catch {
-//                //gif fail upload others
-//                requestsManager.startProcessingRequests()
-//                return
-//            }
-//            sleep(1)
-        }
-        self.saveImageToPhotosAlbum()
-        self.requestsManager.startProcessingRequests()
     }
     
     func gifFileImage() -> URL {
@@ -318,35 +334,43 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
     
     // MARK: - GRRequestManagerDelegate
     
-    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didFailRequest request: GRRequestProtocol!, withError error: Error!) {
-        //fail by request
-    }
+//    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didFailRequest request: GRRequestProtocol!, withError error: Error!) {
+//        //fail by request
+//    }
     
-    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didCompleteUploadRequest request: GRDataExchangeRequestProtocol!) {
-        //all upload
-        if let videoRequest = videoRequest {
-            if request.isEqual(videoRequest) {
-                self.videoRequest = nil
-                self.ftpUploadImagefiles(path: self.path)
-            }
-        }
-    }
-    
-    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didFailWritingFileAtPath path: String!, forRequest request: GRDataExchangeRequestProtocol!, error: Error!) {
-        //fail write path
-    }
-    
-    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didCompletePercent percent: Float, forRequest request: GRRequestProtocol!) {
-        //show percent
-    }
-    
-    func requestsManagerDidCompleteQueue(_ requestsManager: GRRequestsManagerProtocol!) {
-        //queue empty
-        DispatchQueue.main.async {
-            self.removeAllImages()
-            self.resetUICamera()
-        }
-    }
+//    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didCompleteUploadRequest request: GRDataExchangeRequestProtocol!) {
+//        //all upload
+//        if let videoRequest = videoRequest {
+//            if request.isEqual(videoRequest) {
+//                DispatchQueue.main.async {
+//                    self.exportGifFile(path: self.path)
+//                }
+//            }
+//        } else if let gifRequest = self.gifRequest {
+//            if gifRequest.isEqual(request) {
+////                DispatchQueue.main.async {
+////                    self.ftpUploadImagefiles(path: self.path, uploadIndex: self.startUploadIndex)
+////                }
+//            }
+//        }
+//    }
+//    
+//    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didFailWritingFileAtPath path: String!, forRequest request: GRDataExchangeRequestProtocol!, error: Error!) {
+//        //fail write path
+//    }
+//    
+//    func requestsManager(_ requestsManager: GRRequestsManagerProtocol!, didCompletePercent percent: Float, forRequest request: GRRequestProtocol!) {
+//        //show percent
+//    }
+//    
+//    func requestsManagerDidCompleteQueue(_ requestsManager: GRRequestsManagerProtocol!) {
+//        //queue empty
+//        if self.videoRequest != nil {
+//            self.videoRequest = nil
+//        } else if self.gifRequest != nil {
+//            self.gifRequest = nil
+//        }
+//    }
     
     // MARK: - ImagePickerViewControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -370,6 +394,55 @@ class ViewController: UIViewController, GRRequestsManagerDelegate, UIImagePicker
                 self.imagePickerViewController = nil
             })
         }
+    }
+    
+    private func ftpCreateDirectory(path: String, completion: ((Bool) -> Void)?) {
+        let createDirectoryRequest = LxFTPRequest.createResource()
+        createDirectoryRequest?.serverURL = URL(string: ftpURL.appending(path))
+        createDirectoryRequest?.username = ftpUsername
+        createDirectoryRequest?.password = ftpPassword
+        createDirectoryRequest?.successAction = {
+            (resultClass: AnyClass?, result: Any?) in
+            completion?(true)
+        }
+        createDirectoryRequest?.failAction = {
+            (domain: CFStreamErrorDomain, error:Int, errorMessage: String?) in
+            completion?(false)
+        }
+        createDirectoryRequest?.start()
+    }
+    
+    private func ftpCreateFilePath(filePath: String, completion: ((Bool) -> Void)?) {
+        let createDirectoryRequest = LxFTPRequest.createResource()
+        createDirectoryRequest?.serverURL = URL(string: ftpURL.appending(filePath))
+        createDirectoryRequest?.username = ftpUsername
+        createDirectoryRequest?.password = ftpPassword
+        createDirectoryRequest?.successAction = {
+            (resultClass: AnyClass?, result: Any?) in
+            completion?(true)
+        }
+        createDirectoryRequest?.failAction = {
+            (domain: CFStreamErrorDomain, error:Int, errorMessage: String?) in
+            completion?(false)
+        }
+        createDirectoryRequest?.start()
+    }
+    
+    private func ftpUploadFile(localFileURL: URL, filePath: String, completion: ((Bool) -> Void)?) {
+        let createDirectoryRequest = LxFTPRequest.upload()
+        createDirectoryRequest?.serverURL = URL(string: ftpURL.appending(filePath))
+        createDirectoryRequest?.localFileURL = localFileURL
+        createDirectoryRequest?.username = ftpUsername
+        createDirectoryRequest?.password = ftpPassword
+        createDirectoryRequest?.successAction = {
+            (resultClass: AnyClass?, result: Any?) in
+            completion?(true)
+        }
+        createDirectoryRequest?.failAction = {
+            (domain: CFStreamErrorDomain, error:Int, errorMessage: String?) in
+            completion?(false)
+        }
+        createDirectoryRequest?.start()
     }
     
 //    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
