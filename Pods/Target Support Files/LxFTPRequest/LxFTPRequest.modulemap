@@ -1,0 +1,6 @@
+framework module LxFTPRequest {
+  umbrella header "LxFTPRequest-umbrella.h"
+
+  export *
+  module * { export * }
+}
