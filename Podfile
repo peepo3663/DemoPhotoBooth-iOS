@@ -8,11 +8,12 @@ target 'PhotoBooth' do
 # pod 'NextLevel', '~> 0.0.1'
     pod 'LLSimpleCamera'
     #  pod 'rebekka'
-    pod 'GoldRaccoon'
+#    pod 'GoldRaccoon'
     pod 'YYImage'
     # Crashlytics
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'LxFTPRequest'
 end
 
 post_install do |installer|
