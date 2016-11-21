@@ -14,6 +14,7 @@ target 'PhotoBooth' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'LxFTPRequest'
+    pod 'JGProgressHUD'
 end
 
 post_install do |installer|
