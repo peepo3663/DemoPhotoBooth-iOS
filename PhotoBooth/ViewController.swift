@@ -21,6 +21,7 @@ let ftpURL = "ftp://ftp.theblacklist2017.com"
 
 class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var artworkTextTest: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pickedImageButton: UIButton!
     @IBOutlet weak var countdownLabel: UILabel!
@@ -129,16 +130,26 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     @IBAction func startTouchUpInside(_ sender: AnyObject) {
         if let senderButton = sender as? UIButton {
             if startButton == senderButton {
-                var screenRect = self.view.bounds
-                screenRect.origin.y += self.topLayoutGuide.length
-//                let squareRect = CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.width)
-                attachCameraAndStart(shouldStart: true, rect: screenRect)
-                startButton.isHidden = true
-//                pickedImageButton.isHidden = true
-                blackframeImageView.isHidden = false
-                countdownLabel.isHidden = false
-                finishLabel.isHidden = true
-                self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateLabel(timer:)), userInfo: nil, repeats: false)
+                if senderButton.titleLabel?.text == "Done" {
+                    self.finishLabel.isHidden = true
+                    self.startButton.setTitle("Start", for: .normal)
+                    self.artworkTextTest.text = "img1"
+                    self.artworkTextTest.isHidden = false
+                    //show artwork
+                } else {
+                    //restart
+                    var screenRect = self.view.bounds
+                    screenRect.origin.y += self.topLayoutGuide.length
+                    //                let squareRect = CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.width)
+                    attachCameraAndStart(shouldStart: true, rect: screenRect)
+                    startButton.isHidden = true
+                    artworkTextTest.isHidden = true
+                    //                pickedImageButton.isHidden = true
+                    blackframeImageView.isHidden = false
+                    countdownLabel.isHidden = false
+                    finishLabel.isHidden = true
+                    self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateLabel(timer:)), userInfo: nil, repeats: false)
+                }
             }
         }
     }
@@ -168,6 +179,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                         // continue
                         self.time = 5
                         self.startButton.isHidden = true
+                        self.artworkTextTest.isHidden = true
 //                        self.pickedImageButton.isHidden = true
                         self.blackframeImageView.isHidden = false
                         self.countdownLabel.isHidden = false
@@ -190,7 +202,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                     }
                 }
             }
-        }, exactSeenImage: true)
+        })
     }
     
     func saveImageToPhotosAlbum() {
@@ -279,6 +291,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         }
         self.webpEncoder = YYImageEncoder(type: .GIF)
         webpEncoder.loopCount = 5
+        webpEncoder.quality = 0.7
         for (_, value) in imageToUploads.enumerated() {
             let image = value.adjustedImage
             webpEncoder.add(image!, duration: 0.5)
@@ -356,12 +369,14 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     func resetUICamera() {
         countdownLabel.text = "5"
         startButton.isHidden = false
+        artworkTextTest.isHidden = false
+        artworkTextTest.text = "img2"
 //        pickedImageButton.isHidden = false
         blackframeImageView.isHidden = true
         countdownLabel.isHidden = true
         finishLabel.isHidden = false
         time = 5
-        startButton.setTitle("Restart", for: .normal)
+        startButton.setTitle("Done", for: .normal)
         if let previewViewController =  previewViewController {
             previewViewController.stop()
             previewViewController.view.removeFromSuperview()
