@@ -193,7 +193,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                         let firstImage = self.imageToUploads.first!
                         settings.width = firstImage.adjustedImage.size.width
                         settings.height = firstImage.adjustedImage.size.height
-                        settings.fps = 1
+                        settings.fps = 2
                         let imageAnimator = ImageAnimator(renderSettings: settings, images: self.imageToUploads)
                         imageAnimator.render() {
                             self.ftpUploadVideofile(imageAnimator: imageAnimator)
@@ -208,7 +208,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     func saveImageToPhotosAlbum() {
 //        for imageCapture in imageToUploads {
         for (_, value) in imageToUploads.enumerated() {
-            UIImageWriteToSavedPhotosAlbum(value.originalImage, self, #selector(saveImage(_:didFinishSavingWithError:contextInfo:)), nil)
+            UIImageWriteToSavedPhotosAlbum(value.adjustedImage, self, #selector(saveImage(_:didFinishSavingWithError:contextInfo:)), nil)
             sleep(1)
         }
 //        let library = ALAssetsLibrary()
@@ -291,10 +291,14 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         }
         self.webpEncoder = YYImageEncoder(type: .GIF)
         webpEncoder.loopCount = 5
-        webpEncoder.quality = 0.7
         for (_, value) in imageToUploads.enumerated() {
             let image = value.adjustedImage
-            webpEncoder.add(image!, duration: 0.5)
+            if let imageResize = image!.resizeWith(percentage: 0.5) {
+                webpEncoder.add(imageResize, duration: 0.5)
+            } else {
+                //resize fail
+                webpEncoder.add(image!, duration: 0.5)
+            }
         }
         let gifFileURL = self.gifFileImage()
         let success = webpEncoder.encode(toFile: gifFileURL.path)
