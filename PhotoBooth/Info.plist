@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>9b</string>
+	<string>10b</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
