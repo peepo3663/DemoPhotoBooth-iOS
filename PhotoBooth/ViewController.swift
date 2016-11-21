@@ -41,6 +41,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
 //    private var gifRequest: GRDataExchangeRequestProtocol?
     private var imagePickerViewController: UIImagePickerController?
     private var hud: JGProgressHUD?
+//    private var retry = 2
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -230,16 +231,15 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         }
         let filePath = "/\(realPath)" + ".\(imageAnimator.settings.videoFilenameExt)"
         self.ftpCreateDirectory(path: "/\(realPath)/", completion: {
-            success in
+            (request, success) in
             if success {
-                self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
+                self.ftpCreateFilePath(filePath: filePath, completion: { (request, success) in
                     if success {
-                        self.ftpUploadFile(localFileURL: imageAnimator.settings.outputURL, filePath: filePath, completion: { (success) in
-                            self.exportGifFile(path: realPath)
+                        self.ftpUploadFile(localFileURL: imageAnimator.settings.outputURL, filePath: filePath, completion: { (request, success) in
+                            if success {
+                                self.exportGifFile(path: realPath)
+                            }
                         })
-                    } else {
-                        //can't create file path for video
-                        //retry filepath
                     }
                 })
             } else {
@@ -268,15 +268,17 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                 let success = FileManager.default.createFile(atPath: fileURL.path, contents: imageRawData, attributes: nil)
                 if success {
                     let filePath = "/\(path)/jpg-\(index + 1).jpg"
-                    self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
+                    self.ftpCreateFilePath(filePath: filePath, completion: { (request, success) in
                         if success {
-                            self.ftpUploadFile(localFileURL: fileURL, filePath: filePath, completion: { (success) in
-                                if value.adjustedImage == self.imageToUploads.last?.adjustedImage {
-                                    DispatchQueue.main.async {
-                                        self.hud?.dismiss()
-                                        self.saveImageToPhotosAlbum()
-                                        self.removeAllImages()
-                                        self.resetUICamera()
+                            self.ftpUploadFile(localFileURL: fileURL, filePath: filePath, completion: { (request, success) in
+                                if success {
+                                    if value.adjustedImage == self.imageToUploads.last?.adjustedImage {
+                                        DispatchQueue.main.async {
+                                            self.hud?.dismiss()
+                                            self.saveImageToPhotosAlbum()
+                                            self.removeAllImages()
+                                            self.resetUICamera()
+                                        }
                                     }
                                 }
                             })
@@ -314,10 +316,12 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         let success = webpEncoder.encode(toFile: gifFileURL.path)
         if success {
             let filePath = "/\(path).gif"
-            self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
+            self.ftpCreateFilePath(filePath: filePath, completion: { (request, success) in
                 if success {
-                    self.ftpUploadFile(localFileURL: gifFileURL, filePath: filePath, completion: { (success) in
-                        self.ftpUploadImagefiles(path: path)
+                    self.ftpUploadFile(localFileURL: gifFileURL, filePath: filePath, completion: { (request, success) in
+                        if success {
+                            self.ftpUploadImagefiles(path: path)
+                        }
                     })
                 }
             })
@@ -464,39 +468,47 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         }
     }
     
-    private func ftpCreateDirectory(path: String, completion: ((Bool) -> Void)?) {
+    private func ftpCreateDirectory(path: String, completion: ((LxFTPRequest, Bool) -> Void)?) {
         let createDirectoryRequest = LxFTPRequest.createResource()
         createDirectoryRequest?.serverURL = URL(string: ftpURL.appending(path))
         createDirectoryRequest?.username = ftpUsername
         createDirectoryRequest?.password = ftpPassword
         createDirectoryRequest?.successAction = {
             (resultClass: AnyClass?, result: Any?) in
-            completion?(true)
+            completion?(createDirectoryRequest!, true)
         }
         createDirectoryRequest?.failAction = {
             (domain: CFStreamErrorDomain, error:Int, errorMessage: String?) in
-            completion?(false)
+            completion?(createDirectoryRequest!, false)
         }
         createDirectoryRequest?.start()
     }
     
-    private func ftpCreateFilePath(filePath: String, completion: ((Bool) -> Void)?) {
+    private func ftpCreateFilePath(filePath: String, completion: ((LxFTPRequest, Bool) -> Void)?) {
         let createDirectoryRequest = LxFTPRequest.createResource()
         createDirectoryRequest?.serverURL = URL(string: ftpURL.appending(filePath))
         createDirectoryRequest?.username = ftpUsername
         createDirectoryRequest?.password = ftpPassword
         createDirectoryRequest?.successAction = {
             (resultClass: AnyClass?, result: Any?) in
-            completion?(true)
+            completion?(createDirectoryRequest!, true)
         }
         createDirectoryRequest?.failAction = {
             (domain: CFStreamErrorDomain, error:Int, errorMessage: String?) in
-            completion?(false)
+            self.hud?.dismiss()
+            //retry
+            let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Retry", style: .default, handler: { (_) in
+                self.hud?.show(in: self.view)
+                createDirectoryRequest?.start()
+            }))
+            self.present(alertController, animated: true, completion: nil)
+            completion?(createDirectoryRequest!, false)
         }
         createDirectoryRequest?.start()
     }
     
-    private func ftpUploadFile(localFileURL: URL, filePath: String, completion: ((Bool) -> Void)?) {
+    private func ftpUploadFile(localFileURL: URL, filePath: String, completion: ((LxFTPRequest, Bool) -> Void)?) {
         let createDirectoryRequest = LxFTPRequest.upload()
         createDirectoryRequest?.serverURL = URL(string: ftpURL.appending(filePath))
         createDirectoryRequest?.localFileURL = localFileURL
@@ -504,11 +516,19 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         createDirectoryRequest?.password = ftpPassword
         createDirectoryRequest?.successAction = {
             (resultClass: AnyClass?, result: Any?) in
-            completion?(true)
+            completion?(createDirectoryRequest!, true)
         }
         createDirectoryRequest?.failAction = {
             (domain: CFStreamErrorDomain, error:Int, errorMessage: String?) in
-            completion?(false)
+            self.hud?.dismiss()
+            //retry
+            let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Retry", style: .default, handler: { (_) in
+                self.hud?.show(in: self.view)
+                createDirectoryRequest?.start()
+            }))
+            self.present(alertController, animated: true, completion: nil)
+            completion?(createDirectoryRequest!, false)
         }
         createDirectoryRequest?.start()
     }
