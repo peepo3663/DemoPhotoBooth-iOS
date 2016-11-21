@@ -2,6 +2,7 @@ PODS:
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
+  - JGProgressHUD (1.4)
   - LLSimpleCamera (5.0.0)
   - LxFTPRequest (1.0.0)
   - YYImage (1.0.4):
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Crashlytics
   - Fabric
+  - JGProgressHUD
   - LLSimpleCamera
   - LxFTPRequest
   - YYImage
@@ -18,10 +20,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
   LLSimpleCamera: 7175ccb81be71c83d79933089322eb662b1f0327
   LxFTPRequest: 455bb9ad9ffefd601c60071f6d3e1baec623f64b
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: 9f633a98da9740f344c373258c9c49f867fc5b80
+PODFILE CHECKSUM: e5f6a938507d90fb183d868ec694c2504e0e89d7
 
 COCOAPODS: 1.1.1

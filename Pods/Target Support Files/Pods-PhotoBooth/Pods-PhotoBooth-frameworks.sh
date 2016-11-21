@@ -84,11 +84,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/JGProgressHUD/JGProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LLSimpleCamera/LLSimpleCamera.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LxFTPRequest/LxFTPRequest.framework"
   install_framework "$BUILT_PRODUCTS_DIR/YYImage/YYImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/JGProgressHUD/JGProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LLSimpleCamera/LLSimpleCamera.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LxFTPRequest/LxFTPRequest.framework"
   install_framework "$BUILT_PRODUCTS_DIR/YYImage/YYImage.framework"
