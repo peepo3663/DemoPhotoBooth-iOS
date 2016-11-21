@@ -24,60 +24,15 @@ class PHImage {
     
     private func processAdjustedImage(_ image: UIImage) {
         //TODO add watermark
-        let waterMarkImage = self.applyWatermarkIfNeed(image)
-        self.fixrotation(waterMarkImage)
-    }
-
-    private func fixrotation(_ image: UIImage) {
-        let targetWidth = image.size.width
-        let targetHeight = image.size.height
+        self.adjustedImage = self.applyWatermarkIfNeed(image)
+//        self.fixrotation(waterMarkImage)
         
-        let imageRef = image.cgImage!
-        var alphaInfo = imageRef.alphaInfo
-        
-        let colorSpaceInfo = imageRef.colorSpace!
-        
-        if alphaInfo == .none {
-            alphaInfo = .premultipliedFirst
-        }
-        
-        let bitmap: CGContext!
-        
-        if image.imageOrientation == .up || image.imageOrientation == .down {
-            bitmap = CGContext(data: nil, width: Int(targetWidth), height: Int(targetHeight), bitsPerComponent: imageRef.bitsPerComponent, bytesPerRow: imageRef.bytesPerRow, space: colorSpaceInfo, bitmapInfo: alphaInfo.rawValue)!
-        } else {
-            bitmap = CGContext(data: nil, width: Int(targetHeight), height: Int(targetWidth), bitsPerComponent: imageRef.bitsPerComponent, bytesPerRow: imageRef.bytesPerRow, space: colorSpaceInfo, bitmapInfo: alphaInfo.rawValue)!
-        }
-        
-        if image.imageOrientation == .left {
-            bitmap.rotate(by: CGFloat(PHImage.radians(90)))
-            bitmap.translateBy(x: 0, y: -targetHeight)
-            
-        } else if image.imageOrientation == .right {
-            bitmap.rotate(by: CGFloat(PHImage.radians(-90)))
-            bitmap.translateBy(x: -targetWidth, y: 0)
-        } else if image.imageOrientation == .up {
-            // NOTHING
-        } else if image.imageOrientation == .down {
-            bitmap.translateBy(x: targetWidth, y: targetHeight)
-            bitmap.rotate(by: CGFloat(PHImage.radians(180)))
-        }
-        bitmap.draw(imageRef, in: CGRect(x: 0,y: 0,width: targetWidth,height: targetHeight))
-        
-        let ref = bitmap.makeImage()!
-        let newImage = UIImage(cgImage: ref)
-        
-        self.adjustedImage = newImage
-    }
-    
-    class func radians(_ degrees: Double) -> Double {
-        return degrees * M_PI/180.0
     }
     
     private func applyWatermarkIfNeed(_ image: UIImage) -> UIImage {
         if ImageManager.sharedInstance.hasWaterMarkImage() {
-            UIGraphicsBeginImageContextWithOptions(image.size, false, 0.0)
             let areaSize = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+            UIGraphicsBeginImageContextWithOptions(areaSize.size , false, 0.0)
             image.draw(in: areaSize)
             ImageManager.sharedInstance.waterMarkImage!.draw(in: areaSize, blendMode: .normal, alpha: 1.0)
             let result = UIGraphicsGetImageFromCurrentImageContext()!

@@ -10,10 +10,10 @@ import UIKit
 import LLSimpleCamera
 import AVFoundation
 import Photos
-//import GoldRaccoon
 import YYImage
 import LxFTPRequest
 //import AssetsLibrary
+import JGProgressHUD
 
 let ftpUsername = "snapshotapp"
 let ftpPassword = "Pipo1234!"
@@ -26,6 +26,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var finishLabel: UILabel!
     
+    @IBOutlet weak var blackframeImageView: UIImageView!
     private var previewViewController: LLSimpleCamera?
     private var myTimer: Timer?
     private var time = 5
@@ -38,6 +39,11 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
 //    private var videoRequest: GRDataExchangeRequestProtocol?
 //    private var gifRequest: GRDataExchangeRequestProtocol?
     private var imagePickerViewController: UIImagePickerController?
+    private var hud: JGProgressHUD?
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     deinit {
         myTimer?.invalidate()
@@ -58,6 +64,9 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         if self.path != nil {
             self.path = nil
         }
+        if hud != nil {
+            self.hud = nil
+        }
     }
     
     override func viewDidLoad() {
@@ -65,6 +74,9 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         // Do any additional setup after loading the view, typically from a nib.
 //        self.requestsManager = GRRequestsManager(hostname: ftpURL, user: ftpUsername, password: ftpPassword)
 //        self.requestsManager.delegate = self
+        self.pickedImageButton.isHidden = true
+        self.hud = JGProgressHUD(style: .dark)
+        self.hud?.textLabel.text = "Processing..."
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -72,8 +84,18 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         if let previewViewController = self.previewViewController {
             previewViewController.view.removeFromSuperview()
             previewViewController.removeFromParentViewController()
-            self.attachCameraAndStart(shouldStart: false, sizeToDisplay: size)
+//            var squareSizeWidth: CGFloat = 0
+//            if size.width > size.height {
+//                squareSizeWidth = size.height
+//            } else {
+//                squareSizeWidth = size.width
+//            }
+//            let squareSize = CGSize(width: squareSizeWidth, height: squareSizeWidth)
+            var screenRect = self.view.bounds
+            screenRect.origin.y += self.topLayoutGuide.length
+            self.attachCameraAndStart(shouldStart: false, rect: screenRect)
         }
+        self.view.bringSubview(toFront: blackframeImageView)
         self.view.bringSubview(toFront: finishLabel)
         self.view.bringSubview(toFront: countdownLabel)
         self.view.bringSubview(toFront: startButton)
@@ -93,7 +115,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         myTimer?.invalidate()
         self.myTimer = nil
         self.resetUICamera()
-        self.imageToUploads.removeAll()
+        self.removeAllImages()
     }
     
     @IBAction func pickImageWatermark(_ sender: UIButton) {
@@ -107,9 +129,13 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     @IBAction func startTouchUpInside(_ sender: AnyObject) {
         if let senderButton = sender as? UIButton {
             if startButton == senderButton {
-                attachCameraAndStart(shouldStart: true, sizeToDisplay: UIScreen.main.bounds.size)
+                var screenRect = self.view.bounds
+                screenRect.origin.y += self.topLayoutGuide.length
+//                let squareRect = CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.width)
+                attachCameraAndStart(shouldStart: true, rect: screenRect)
                 startButton.isHidden = true
-                pickedImageButton.isHidden = true
+//                pickedImageButton.isHidden = true
+                blackframeImageView.isHidden = false
                 countdownLabel.isHidden = false
                 finishLabel.isHidden = true
                 self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateLabel(timer:)), userInfo: nil, repeats: false)
@@ -142,12 +168,15 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                         // continue
                         self.time = 5
                         self.startButton.isHidden = true
-                        self.pickedImageButton.isHidden = true
+//                        self.pickedImageButton.isHidden = true
+                        self.blackframeImageView.isHidden = false
                         self.countdownLabel.isHidden = false
                         self.countdownLabel.text = "5"
-                        self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.updateLabel(timer:)), userInfo: nil, repeats: false)
+                        self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector:
+                            #selector(self.updateLabel(timer:)), userInfo: nil, repeats: false)
                     } else {
                         // 5 images upload and reset
+                        self.hud?.show(in: self.view)
                         var settings = RenderSettings()
                         let firstImage = self.imageToUploads.first!
                         settings.width = firstImage.adjustedImage.size.width
@@ -161,7 +190,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                     }
                 }
             }
-        })
+        }, exactSeenImage: true)
     }
     
     func saveImageToPhotosAlbum() {
@@ -183,19 +212,24 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     func ftpUploadVideofile(imageAnimator: ImageAnimator) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYYMMdd_HHmmss"
-        let folderName = dateFormatter.string(from: Date())
-        self.path = "/\(folderName)/"
-        let filePath = self.path + "\(imageAnimator.settings.videoFilename).\(imageAnimator.settings.videoFilenameExt)"
-        self.ftpCreateDirectory(path: self.path, completion: {
+        self.path = dateFormatter.string(from: Date())
+        guard let realPath = path else {
+            return
+        }
+        let filePath = "/\(realPath)" + ".\(imageAnimator.settings.videoFilenameExt)"
+        self.ftpCreateDirectory(path: "/\(realPath)/", completion: {
             success in
             if success {
                 self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
                     if success {
                         self.ftpUploadFile(localFileURL: imageAnimator.settings.outputURL, filePath: filePath, completion: { (success) in
-                            self.exportGifFile(path: self.path)
+                            self.exportGifFile(path: realPath)
                         })
                     }
                 })
+            } else {
+                //can't create folder
+                self.hud?.dismiss()
             }
         })
 //        requestsManager.addRequestForCreateDirectory(atPath: path)
@@ -208,15 +242,16 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
             let image = value.adjustedImage
             let fileURL = self.fileImages(index + 1)
             // Save image to Document directory
-            if let imageRawData = UIImagePNGRepresentation(image!) {
+            if let imageRawData = UIImageJPEGRepresentation(image!, 0.85) {
                 let success = FileManager.default.createFile(atPath: fileURL.path, contents: imageRawData, attributes: nil)
                 if success {
-                    let filePath = "\(path)png-\(index + 1).png"
+                    let filePath = "/\(path)/jpg-\(index + 1).jpg"
                     self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
                         if success {
                             self.ftpUploadFile(localFileURL: fileURL, filePath: filePath, completion: { (success) in
                                 if value.adjustedImage == self.imageToUploads.last?.adjustedImage {
                                     DispatchQueue.main.async {
+                                        self.hud?.dismiss()
                                         self.saveImageToPhotosAlbum()
                                         self.removeAllImages()
                                         self.resetUICamera()
@@ -246,28 +281,26 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         webpEncoder.loopCount = 5
         for (_, value) in imageToUploads.enumerated() {
             let image = value.adjustedImage
-            webpEncoder.add(image!, duration: 1.0)
+            webpEncoder.add(image!, duration: 0.5)
         }
-        if let gifData = webpEncoder.encode() {
-            let gifFileURL = self.gifFileImage()
-                let success = FileManager.default.createFile(atPath: gifFileURL.path, contents: gifData, attributes: nil)
+        let gifFileURL = self.gifFileImage()
+        let success = webpEncoder.encode(toFile: gifFileURL.path)
+        if success {
+            let filePath = "/\(path).gif"
+            self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
                 if success {
-                    let filePath = "\(path)animateGIF.gif"
-                    self.ftpCreateFilePath(filePath: filePath, completion: { (success) in
-                        if success {
-                            self.ftpUploadFile(localFileURL: gifFileURL, filePath: filePath, completion: { (success) in
-                                self.ftpUploadImagefiles(path: path)
-                            })
-                        }
+                    self.ftpUploadFile(localFileURL: gifFileURL, filePath: filePath, completion: { (success) in
+                        self.ftpUploadImagefiles(path: path)
                     })
-                } else {
-                    //gif fail upload others
-                    self.ftpUploadImagefiles(path: path)
-                    return
                 }
-            }
+            })
+        } else {
+            //gif fail upload others
+            self.ftpUploadImagefiles(path: path)
+            return
+        }
     }
-    
+
     func gifFileImage() -> URL {
         let fileManager = FileManager.default
         if let tmpDirURL = try? fileManager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true) {
@@ -281,7 +314,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         // Using the CachesDirectory ensures the file won't be included in a backup of the app.
         let fileManager = FileManager.default
         if let tmpDirURL = try? fileManager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true) {
-            return tmpDirURL.appendingPathComponent("png-\(index)").appendingPathExtension("png")
+            return tmpDirURL.appendingPathComponent("jpg-\(index)").appendingPathExtension("jpg")
         }
         fatalError("URLForDirectory() failed")
     }
@@ -302,11 +335,16 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         }
     }
     
-    private func attachCameraAndStart(shouldStart: Bool, sizeToDisplay: CGSize) {
+    private func attachCameraAndStart(shouldStart: Bool, rect: CGRect) {
+        if rect == CGRect.zero {
+            return
+        }
         if self.previewViewController == nil {
             self.previewViewController = LLSimpleCamera(quality: AVCaptureSessionPresetPhoto, position: LLCameraPositionFront, videoEnabled: false)
+            self.previewViewController?.fixOrientationAfterCapture = true
         }
-        self.previewViewController!.attach(to: self, withFrame: CGRect(x: 0, y: 0, width: sizeToDisplay.width, height: sizeToDisplay.height))
+        self.previewViewController!.attach(to: self, withFrame: rect)
+        self.view.bringSubview(toFront: blackframeImageView)
         self.view.bringSubview(toFront: finishLabel)
         self.view.bringSubview(toFront: countdownLabel)
         self.view.bringSubview(toFront: startButton)
@@ -318,7 +356,8 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     func resetUICamera() {
         countdownLabel.text = "5"
         startButton.isHidden = false
-        pickedImageButton.isHidden = false
+//        pickedImageButton.isHidden = false
+        blackframeImageView.isHidden = true
         countdownLabel.isHidden = true
         finishLabel.isHidden = false
         time = 5
