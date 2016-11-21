@@ -237,11 +237,21 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                         self.ftpUploadFile(localFileURL: imageAnimator.settings.outputURL, filePath: filePath, completion: { (success) in
                             self.exportGifFile(path: realPath)
                         })
+                    } else {
+                        //can't create file path for video
+                        //retry filepath
                     }
                 })
             } else {
                 //can't create folder
+                //retry them
                 self.hud?.dismiss()
+                let alertController = UIAlertController(title: "Error", message: "Something goes wrong, Please try again.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Retry", style: .default, handler: { (_) in
+                    self.hud?.show(in: self.view)
+                    self.ftpUploadVideofile(imageAnimator: imageAnimator)
+                }))
+                self.present(alertController, animated: true, completion: nil)
             }
         })
 //        requestsManager.addRequestForCreateDirectory(atPath: path)
