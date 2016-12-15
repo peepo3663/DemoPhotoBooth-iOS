@@ -18,6 +18,7 @@
 		7ABB47001DAF6BB500E57A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB46FF1DAF6BB500E57A80 /* Assets.xcassets */; };
 		7ABB47031DAF6BB500E57A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB47011DAF6BB500E57A80 /* LaunchScreen.storyboard */; };
 		7AFECD9B1DBA13AB0058A759 /* PHImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFECD9A1DBA13AB0058A759 /* PHImage.swift */; };
+		F898434D1E0252B9008FF28B /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = F898434C1E0252B9008FF28B /* Pods */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		7ABB47021DAF6BB500E57A80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ABB47041DAF6BB500E57A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AFECD9A1DBA13AB0058A759 /* PHImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHImage.swift; sourceTree = "<group>"; };
+		F898434C1E0252B9008FF28B /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		EF5FD2EE839A158881DBC01C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F898434C1E0252B9008FF28B /* Pods */,
 				7A91AA591DD8575A0031043A /* PhotosUI.framework */,
 				7A6BAFD11DD856BC00018638 /* Photos.framework */,
 				40E7526D03876848EDE3C62B /* Pods_PhotoBooth.framework */,
@@ -145,8 +148,8 @@
 				TargetAttributes = {
 					7ABB46F41DAF6BB500E57A80 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9U7GB28537;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 4U99SV73M8;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -175,6 +178,7 @@
 			files = (
 				7ABB47031DAF6BB500E57A80 /* LaunchScreen.storyboard in Resources */,
 				7ABB47001DAF6BB500E57A80 /* Assets.xcassets in Resources */,
+				F898434D1E0252B9008FF28B /* Pods in Resources */,
 				7ABB46FE1DAF6BB500E57A80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +212,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" d06b5fb31f5af9a18bce41d906c4be4c88fe9dc4 f7af6bf406d070b8ca96a881480995722135e40330be3f7bafb2aba08a92c493";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" d388dc773a89514aa4374753a346c1d23624a6c2 b5883d5f225303f9dc9e750e589b23484bbe89d53808053616b60d2691106209";
 		};
 		872E25A0D710EFCFA9EC5F96 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -379,14 +383,16 @@
 			baseConfigurationReference = 6D57E62FD13A62FC6CEF2DA5 /* Pods-PhotoBooth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9U7GB28537;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 4U99SV73M8;
 				INFOPLIST_FILE = PhotoBooth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = co.uniqorn.PhotoBooth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.billionaireproject.PhotoBooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "eb04f1b4-c95f-40d0-af37-13c43a5ef659";
+				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Provisioning";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhotoBooth/PhotoBooth-Bridging.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -398,13 +404,15 @@
 			baseConfigurationReference = 017C6C091B937D3D25E503EA /* Pods-PhotoBooth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9U7GB28537;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 4U99SV73M8;
 				INFOPLIST_FILE = PhotoBooth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.uniqorn.PhotoBooth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.billionaireproject.PhotoBooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "eb04f1b4-c95f-40d0-af37-13c43a5ef659";
+				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Provisioning";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhotoBooth/PhotoBooth-Bridging.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

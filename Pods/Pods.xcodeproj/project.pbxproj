@@ -109,10 +109,10 @@
 
 /* Begin PBXFileReference section */
 		0DBD27D80C0F2D6E8618921F6F0FD3E0 /* JGProgressHUDIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.m; sourceTree = "<group>"; };
-		0E0C36D1EC489CA211E651BB2460331C /* Pods_PhotoBooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PhotoBooth.framework; path = "Pods-PhotoBooth.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E0C36D1EC489CA211E651BB2460331C /* Pods_PhotoBooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoBooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11DC6DA29E3AC4163D412E856E20ECBB /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		123137B9733CC7EBCD788D50303045D1 /* YYAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYAnimatedImageView.h; path = YYImage/YYAnimatedImageView.h; sourceTree = "<group>"; };
-		1605DEEFB310D4A1776C68AA12659FE2 /* JGProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JGProgressHUD.modulemap; sourceTree = "<group>"; };
+		1605DEEFB310D4A1776C68AA12659FE2 /* JGProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JGProgressHUD.modulemap; sourceTree = "<group>"; };
 		19F6F51BAEF6E9F21DEA6D8047DA5DB3 /* YYImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYImageCoder.h; path = YYImage/YYImageCoder.h; sourceTree = "<group>"; };
 		1CD3B91FE184D6E92C91371C8AF18246 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		1E6F806ACD620089E122DFFEB893ED99 /* JGProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-prefix.pch"; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		7FFD6B106766241C0019C0D3A039E5EB /* Pods-PhotoBooth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhotoBooth-umbrella.h"; sourceTree = "<group>"; };
 		810B42230AE84701B2F2BC83CF15CDAD /* LxFTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LxFTPRequest.h; path = LxFTPRequest/LxFTPRequest.h; sourceTree = "<group>"; };
 		83C1F717C750A39A4808A4B19ACB2DF3 /* YYImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYImageCoder.m; path = YYImage/YYImageCoder.m; sourceTree = "<group>"; };
-		84244D80CEFF660A8B084233685F913F /* LLSimpleCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LLSimpleCamera.modulemap; sourceTree = "<group>"; };
+		84244D80CEFF660A8B084233685F913F /* LLSimpleCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LLSimpleCamera.modulemap; sourceTree = "<group>"; };
 		84DD7C2488E842A30D4B7697AFD0E425 /* JGProgressHUDIndeterminateIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndeterminateIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.h; sourceTree = "<group>"; };
 		877F9FC4EAFC6798901B05251F323B49 /* LLSimpleCamera+Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LLSimpleCamera+Helper.h"; path = "LLSimpleCamera/LLSimpleCamera+Helper.h"; sourceTree = "<group>"; };
 		8823835B38E90177D9F0D38C7F6FB9C2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
@@ -162,8 +162,8 @@
 		8F12B0F99C0E4CE114E80479989EF328 /* JGProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGProgressHUD.xcconfig; sourceTree = "<group>"; };
 		900EEB0C028635B61D162C5CFE1B9E40 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		92531465F032253A89F8E4E3F82ABE88 /* YYSpriteSheetImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYSpriteSheetImage.h; path = YYImage/YYSpriteSheetImage.h; sourceTree = "<group>"; };
-		937C7FCEAD921BA259B1C25AFD5A3553 /* YYImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYImage.framework; path = YYImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		937C7FCEAD921BA259B1C25AFD5A3553 /* YYImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		947696414986FE9D9473512E11AEA8C6 /* Pods-PhotoBooth-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhotoBooth-acknowledgements.markdown"; sourceTree = "<group>"; };
 		94C4A4F3E16795A82A0661AFABDC608F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96EC5C493E6F3A554CC4ADCDE5EF3E27 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -171,15 +171,15 @@
 		A22B30F672B8D32F15FA2AFA3FB4C319 /* YYImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYImage.m; path = YYImage/YYImage.m; sourceTree = "<group>"; };
 		A3236FAA9E5C15E05DEDFAACFFC345A6 /* LLSimpleCamera+Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LLSimpleCamera+Helper.m"; path = "LLSimpleCamera/LLSimpleCamera+Helper.m"; sourceTree = "<group>"; };
 		A4E11BA6AAC7D30063561B3DE3B605EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A8ADEE7C1B1D244719B9CB9CD9C0E561 /* LxFTPRequest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LxFTPRequest.modulemap; sourceTree = "<group>"; };
+		A8ADEE7C1B1D244719B9CB9CD9C0E561 /* LxFTPRequest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LxFTPRequest.modulemap; sourceTree = "<group>"; };
 		AC6F371A9088D4EEB3BA16DA2D46E6B9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		AD380C6F4666AEC9222A29BA08D0CEBF /* YYImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = YYImage.modulemap; sourceTree = "<group>"; };
+		AD380C6F4666AEC9222A29BA08D0CEBF /* YYImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YYImage.modulemap; sourceTree = "<group>"; };
 		AEB8DCB3F5973B63C3F1740849118808 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		B3D8ABA6C9EF2227870758A54AF255E9 /* YYAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYAnimatedImageView.m; path = YYImage/YYAnimatedImageView.m; sourceTree = "<group>"; };
 		B87958988599BDC9B2A3048A9B9BF6D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA38D281ECD9BD679F92BCC9D8FAB638 /* LLSimpleCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LLSimpleCamera.h; path = LLSimpleCamera/LLSimpleCamera.h; sourceTree = "<group>"; };
 		BB0ABF0828F168753F1BABCC73904BF8 /* YYFrameImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYFrameImage.h; path = YYImage/YYFrameImage.h; sourceTree = "<group>"; };
-		BD4F51763B54F8F6C9C40481BD217946 /* Pods-PhotoBooth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PhotoBooth.modulemap"; sourceTree = "<group>"; };
+		BD4F51763B54F8F6C9C40481BD217946 /* Pods-PhotoBooth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PhotoBooth.modulemap"; sourceTree = "<group>"; };
 		C02549640780C2296877D379BC652A7B /* Pods-PhotoBooth-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhotoBooth-acknowledgements.plist"; sourceTree = "<group>"; };
 		C355593E3C500296F97667E985896E1E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		C5D4F1BFD4703EE4E3AFDF41A25DE282 /* Pods-PhotoBooth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhotoBooth-dummy.m"; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 		D818AC37A6B7930C6908F7BF623077B9 /* JGProgressHUDIndeterminateIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDIndeterminateIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.m; sourceTree = "<group>"; };
 		D85882C2BE20F7EB5BDFE76F86B2CDC3 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+FixOrientation.h"; path = "LLSimpleCamera/UIImage+FixOrientation.h"; sourceTree = "<group>"; };
 		DA8C943B9664E4857CC4F150C7BC96C2 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FixOrientation.m"; path = "LLSimpleCamera/UIImage+FixOrientation.m"; sourceTree = "<group>"; };
-		E12C65608F227C6613802EBA4416DAB8 /* JGProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JGProgressHUD.framework; path = JGProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12C65608F227C6613802EBA4416DAB8 /* JGProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A1765456211138E97B2A2BD90ACB84 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		E70AB1BC2391A3E95B3702A9BE7A92E1 /* JGProgressHUDFadeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.m; sourceTree = "<group>"; };
 		EA650FF57D4EF51B7307E0210584B617 /* JGProgressHUDErrorIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDErrorIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDErrorIndicatorView.h; sourceTree = "<group>"; };
@@ -199,9 +199,9 @@
 		EDA7E70296577FC06A3B9EEDBD7BE7BB /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		EEB612320BB9D03167CE5976FC0E1E81 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF97C9987AA88632D4256F841D7B5D85 /* JGProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		F03719E3CC70308CE6EB99A74DE75B71 /* LxFTPRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LxFTPRequest.framework; path = LxFTPRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F03719E3CC70308CE6EB99A74DE75B71 /* LxFTPRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LxFTPRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F111617C1BDBD876EB6CCBB92F192199 /* JGProgressHUDPieIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDPieIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.h; sourceTree = "<group>"; };
-		F1A402759EF86D8CED7DF6AE35279251 /* LLSimpleCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LLSimpleCamera.framework; path = LLSimpleCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1A402759EF86D8CED7DF6AE35279251 /* LLSimpleCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLSimpleCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A9C246159F67ACAFE1355E52BBB50A /* JGProgressHUDAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.h; sourceTree = "<group>"; };
 		F5EF91B793ADD0CC72C470F354392F89 /* LxFTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LxFTPRequest-prefix.pch"; sourceTree = "<group>"; };
 		F694E578088FC2EC878D146A5F3E8DB3 /* Pods-PhotoBooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhotoBooth.debug.xcconfig"; sourceTree = "<group>"; };
@@ -308,7 +308,6 @@
 				BC12EFCBD848709DD47F9B1F3108FD84 /* Core */,
 				CD4329DA50E593C9427725D8F729364B /* Support Files */,
 			);
-			name = YYImage;
 			path = YYImage;
 			sourceTree = "<group>";
 		};
@@ -349,7 +348,6 @@
 				FB6BDB31C959091D170610175066C0F8 /* Resources */,
 				BD38DBF975047430226C4E80B2BBE037 /* Support Files */,
 			);
-			name = JGProgressHUD;
 			path = JGProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -360,7 +358,6 @@
 				5D22AF91B660D0A85D1B61D06A553C2C /* LxFTPRequest.m */,
 				9BDE0A1ED62DC1453FB7206C11B37A15 /* Support Files */,
 			);
-			name = LxFTPRequest;
 			path = LxFTPRequest;
 			sourceTree = "<group>";
 		};
@@ -408,7 +405,6 @@
 				FBC5DF2FB0E21E768C52CB79815B34E2 /* Fabric.h */,
 				EF6132243C15BFA8D24C9B06AE0EFDEC /* Frameworks */,
 			);
-			name = Fabric;
 			path = Fabric;
 			sourceTree = "<group>";
 		};
@@ -437,7 +433,6 @@
 				DA8C943B9664E4857CC4F150C7BC96C2 /* UIImage+FixOrientation.m */,
 				CA6FDE134E1140C88CFF48F762AC454F /* Support Files */,
 			);
-			name = LLSimpleCamera;
 			path = LLSimpleCamera;
 			sourceTree = "<group>";
 		};
@@ -533,7 +528,6 @@
 				74476A1F451C9C8ACADD537666988CF5 /* Crashlytics.h */,
 				32123CD21507309DA9C392EA5C88667A /* Frameworks */,
 			);
-			name = Crashlytics;
 			path = Crashlytics;
 			sourceTree = "<group>";
 		};
@@ -1190,7 +1184,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

@@ -15,7 +15,8 @@ struct RenderSettings {
     
     var width: CGFloat = 1280
     var height: CGFloat = 720
-    var fps: Int32 = 2   // 2 frames per second
+//    var fps: Int32 = 2   // 2 frames per second
+    var fps: Int32 = 16   // 8 frames per second
     var avCodecKey = AVVideoCodecH264
     var videoFilename = "render"
     var videoFilenameExt = "mp4"

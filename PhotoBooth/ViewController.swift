@@ -21,7 +21,8 @@ let ftpURL = "ftp://ftp.theblacklist2017.com"
 
 class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var artworkTextTest: UILabel!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+//    @IBOutlet weak var artworkTextTest: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pickedImageButton: UIButton!
     @IBOutlet weak var countdownLabel: UILabel!
@@ -77,6 +78,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
 //        self.requestsManager = GRRequestsManager(hostname: ftpURL, user: ftpUsername, password: ftpPassword)
 //        self.requestsManager.delegate = self
         self.pickedImageButton.isHidden = true
+        self.backgroundImageView.isHidden = false
         self.hud = JGProgressHUD(style: .dark)
         self.hud?.textLabel.text = "Processing..."
     }
@@ -97,6 +99,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
             screenRect.origin.y += self.topLayoutGuide.length
             self.attachCameraAndStart(shouldStart: false, rect: screenRect)
         }
+        self.view.bringSubview(toFront: backgroundImageView)
         self.view.bringSubview(toFront: blackframeImageView)
         self.view.bringSubview(toFront: finishLabel)
         self.view.bringSubview(toFront: countdownLabel)
@@ -134,8 +137,8 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                 if senderButton.titleLabel?.text == "Done" {
                     self.finishLabel.isHidden = true
                     self.startButton.setTitle("Start", for: .normal)
-                    self.artworkTextTest.text = "img1"
-                    self.artworkTextTest.isHidden = false
+//                    self.artworkTextTest.text = "img1"
+//                    self.artworkTextTest.isHidden = false
                     //show artwork
                 } else {
                     //restart
@@ -144,8 +147,9 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                     //                let squareRect = CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.width)
                     attachCameraAndStart(shouldStart: true, rect: screenRect)
                     startButton.isHidden = true
-                    artworkTextTest.isHidden = true
+//                    artworkTextTest.isHidden = true
                     //                pickedImageButton.isHidden = true
+                    backgroundImageView.isHidden = true
                     blackframeImageView.isHidden = false
                     countdownLabel.isHidden = false
                     finishLabel.isHidden = true
@@ -180,7 +184,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                         // continue
                         self.time = 5
                         self.startButton.isHidden = true
-                        self.artworkTextTest.isHidden = true
+//                        self.artworkTextTest.isHidden = true
 //                        self.pickedImageButton.isHidden = true
                         self.blackframeImageView.isHidden = false
                         self.countdownLabel.isHidden = false
@@ -260,19 +264,25 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     }
     
     func ftpUploadImagefiles(path: String) {
-        for (index, value) in imageToUploads.enumerated() {
+        for (index, value) in imageToUploads.enumerated()
+        {
             let image = value.adjustedImage
             let fileURL = self.fileImages(index + 1)
             // Save image to Document directory
-            if let imageRawData = UIImageJPEGRepresentation(image!, 0.85) {
+            if let imageRawData = UIImageJPEGRepresentation(image!, 0.85)
+            {
                 let success = FileManager.default.createFile(atPath: fileURL.path, contents: imageRawData, attributes: nil)
-                if success {
+                if success
+                {
                     let filePath = "/\(path)/jpg-\(index + 1).jpg"
                     self.ftpCreateFilePath(filePath: filePath, completion: { (request, success) in
-                        if success {
+                        if success
+                        {
                             self.ftpUploadFile(localFileURL: fileURL, filePath: filePath, completion: { (request, success) in
-                                if success {
-                                    if value.adjustedImage == self.imageToUploads.last?.adjustedImage {
+                                if success
+                                {
+                                    if value.adjustedImage == self.imageToUploads.last?.adjustedImage
+                                    {
                                         DispatchQueue.main.async {
                                             self.hud?.dismiss()
                                             self.saveImageToPhotosAlbum()
@@ -305,8 +315,8 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         webpEncoder.loopCount = 5
         for (_, value) in imageToUploads.enumerated() {
             let image = value.adjustedImage
-            if let imageResize = image!.resizeWith(percentage: 0.5) {
-                webpEncoder.add(imageResize, duration: 0.5)
+            if let imageResize = image!.resizeWith(percentage: 0.3) {
+                webpEncoder.add(imageResize, duration: 0.3)
             } else {
                 //resize fail
                 webpEncoder.add(image!, duration: 0.5)
@@ -387,9 +397,10 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     func resetUICamera() {
         countdownLabel.text = "5"
         startButton.isHidden = false
-        artworkTextTest.isHidden = false
-        artworkTextTest.text = "img2"
+//        artworkTextTest.isHidden = false
+//        artworkTextTest.text = "img2"
 //        pickedImageButton.isHidden = false
+        backgroundImageView.isHidden = false
         blackframeImageView.isHidden = true
         countdownLabel.isHidden = true
         finishLabel.isHidden = false
