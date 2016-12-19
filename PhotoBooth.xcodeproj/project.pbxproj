@@ -324,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -369,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -383,7 +383,7 @@
 			baseConfigurationReference = 6D57E62FD13A62FC6CEF2DA5 /* Pods-PhotoBooth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4U99SV73M8;
 				INFOPLIST_FILE = PhotoBooth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -391,11 +391,11 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.billionaireproject.PhotoBooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eb04f1b4-c95f-40d0-af37-13c43a5ef659";
-				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Provisioning";
+				PROVISIONING_PROFILE = "6edba9d4-d9e0-4118-85c5-f58569b13d1c";
+				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Development Provisioning";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhotoBooth/PhotoBooth-Bridging.h";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -404,18 +404,18 @@
 			baseConfigurationReference = 017C6C091B937D3D25E503EA /* Pods-PhotoBooth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4U99SV73M8;
 				INFOPLIST_FILE = PhotoBooth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.billionaireproject.PhotoBooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eb04f1b4-c95f-40d0-af37-13c43a5ef659";
-				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Provisioning";
+				PROVISIONING_PROFILE = "6edba9d4-d9e0-4118-85c5-f58569b13d1c";
+				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Development Provisioning";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhotoBooth/PhotoBooth-Bridging.h";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

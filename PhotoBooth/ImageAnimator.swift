@@ -71,9 +71,11 @@ class ImageAnimator {
     // Replace this logic with your own.
     func loadImages(phImage: [PHImage]) -> [UIImage] {
         var images = [UIImage]()
+        print("ImageAnimator class Size check")
         for _ in 0...1 {
             for index in 0...phImage.count-1 {
                 images.append(phImage[index].adjustedImage)
+                print(phImage[index].adjustedImage.size)
             }
         }
         return images

@@ -19,7 +19,11 @@ class PHImage {
     
     init(image: UIImage) {
         self.originalImage = image
+        print("original image size: \(self.originalImage.size)")
+        // Start proceed adjust image with watermark ater init
         self.processAdjustedImage(image)
+        // set adjust image equals to image that captured from screen
+//        self.adjustedImage = image
     }
     
     private func processAdjustedImage(_ image: UIImage) {
@@ -31,18 +35,40 @@ class PHImage {
     
     private func applyWatermarkIfNeed(_ image: UIImage) -> UIImage {
         if ImageManager.sharedInstance.hasWaterMarkImage() {
+            print("areaSize width: \(image.size.width)")
+            print("areaSize height: \(image.size.height)")
             let areaSize = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
             UIGraphicsBeginImageContextWithOptions(areaSize.size , false, 0.0)
+            print("areaSize: \(areaSize.size)")
             image.draw(in: areaSize)
             ImageManager.sharedInstance.waterMarkImage!.draw(in: areaSize, blendMode: .normal, alpha: 1.0)
             let result = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
+            print("result size: \(result.size)")
             return result
         } else {
             //no watermark
             return image
         }
     }
+    
+    
+//    private func drawFrame(_ image: UIImage) -> UIImage
+//    {
+//        var bottomImage  = UIImage(cgImage: ImageManager.sharedInstance.waterMarkImage?.cgImage)
+//        var topImage = image!
+//        
+//        var size = CGSize(width: 300, height: 300)
+//        UIGraphicsBeginImageContext(size)
+//        
+//        let areaSize = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+//        bottomImage!.drawInRect(areaSize)
+//        
+//        topImage!.drawInRect(areaSize, blendMode: kCGBlendModeNormal, alpha: 0.8)
+//        
+//        var newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//    }
 }
 
 extension UIImage {

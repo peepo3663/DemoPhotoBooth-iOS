@@ -1,18 +1,31 @@
 {
   "images" : [
     {
+      "idiom" : "ipad",
+      "filename" : "frame1350x1080.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "frame1350x1080-1.png",
+      "scale" : "2x"
+    },
+    {
       "idiom" : "universal",
       "filename" : "blacklist_frame@1x.png",
+      "unassigned" : true,
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "filename" : "blacklist_frame@2x.png",
+      "unassigned" : true,
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
       "filename" : "blacklist_frame.png",
+      "unassigned" : true,
       "scale" : "3x"
     }
   ],

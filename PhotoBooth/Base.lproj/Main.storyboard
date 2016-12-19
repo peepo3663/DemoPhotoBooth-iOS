@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,18 +45,10 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-i2-ZCx">
-                                <rect key="frame" x="314.5" y="828" width="139.5" height="36"/>
+                                <rect key="frame" x="314" y="828" width="140" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoP-Ex-QFb">
-                                <rect key="frame" x="346" y="357.5" width="76.5" height="155.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="130"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXW-Um-XVV">
                                 <rect key="frame" x="339" y="872" width="90" height="48"/>
@@ -68,30 +60,50 @@
                                     <action selector="startTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1X-j9-oNN"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoP-Ex-QFb">
+                                <rect key="frame" x="315" y="298" width="139" height="189"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="130"/>
+                                <color key="textColor" red="1" green="0.72941176470588232" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="0.72941176470588232" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrV-JA-jPR" userLabel="cameraSelectorButton">
+                                <rect key="frame" x="58" y="929" width="109" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Front">
+                                    <color key="titleColor" red="0.94127523697970494" green="0.97697754105553247" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.67290609137055846" green="0.58218624917069484" blue="0.11598176830013272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraSelectorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1lr-IW-a4v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="37C-kc-9GG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="601-Gy-Tqa"/>
                             <constraint firstItem="KoP-Ex-QFb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.85" id="9WO-V2-xZn"/>
-                            <constraint firstItem="WTc-rK-Zsg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="E18-HQ-4fK"/>
+                            <constraint firstItem="WTc-rK-Zsg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CrP-bc-TSW"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="top" secondItem="Lbo-i2-ZCx" secondAttribute="bottom" constant="8" id="Nwl-PZ-w6k"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SY6-MP-Xkz"/>
-                            <constraint firstItem="37C-kc-9GG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="X1F-LQ-z1b"/>
                             <constraint firstAttribute="trailing" secondItem="WTc-rK-Zsg" secondAttribute="trailing" id="Xmv-Uj-yge"/>
                             <constraint firstAttribute="trailing" secondItem="37C-kc-9GG" secondAttribute="trailing" constant="15" id="cJk-lP-eLe"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="foR-EY-c4E"/>
                             <constraint firstItem="Lbo-i2-ZCx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8M-Ya-E8O"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WTc-rK-Zsg" secondAttribute="bottom" id="irb-uf-EQg"/>
                             <constraint firstItem="WTc-rK-Zsg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mjL-ix-hAb"/>
                             <constraint firstItem="KoP-Ex-QFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uao-9f-JgT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WTc-rK-Zsg" secondAttribute="bottom" id="yeS-O7-aJS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="iyx-wW-5Xj" id="NVI-82-Mry"/>
                         <outlet property="blackframeImageView" destination="WTc-rK-Zsg" id="gu7-Ji-EoW"/>
+                        <outlet property="cameraSelectorButton" destination="YrV-JA-jPR" id="tfL-5h-rqo"/>
                         <outlet property="countdownLabel" destination="KoP-Ex-QFb" id="wwJ-LD-IMI"/>
                         <outlet property="finishLabel" destination="Lbo-i2-ZCx" id="UxB-jS-egJ"/>
-                        <outlet property="pickedImageButton" destination="37C-kc-9GG" id="2E5-Ve-2Hz"/>
+                        <outlet property="pickedImageButton" destination="37C-kc-9GG" id="6yg-Jv-1ar"/>
                         <outlet property="startButton" destination="JXW-Um-XVV" id="csb-zq-DIW"/>
+                        <outlet property="subView" destination="8bC-Xf-vdC" id="6fI-A7-pVR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
