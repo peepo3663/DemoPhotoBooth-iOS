@@ -19,11 +19,11 @@ class PHImage {
     
     init(image: UIImage) {
         self.originalImage = image
-        print("original image size: \(self.originalImage.size)")
+        // print("original image size: \(self.originalImage.size)")
         // Start proceed adjust image with watermark ater init
         self.processAdjustedImage(image)
         // set adjust image equals to image that captured from screen
-//        self.adjustedImage = image
+        // self.adjustedImage = image
     }
     
     private func processAdjustedImage(_ image: UIImage) {
@@ -31,6 +31,9 @@ class PHImage {
         self.adjustedImage = self.applyWatermarkIfNeed(image)
 //        self.fixrotation(waterMarkImage)
 //        self.adjustedImage = self.adjustedImage.resizeWith(percentage: 0.25)
+//        if UIDevice.current.userInterfaceIdiom == .pad {
+//            self.adjustedImage = self.adjustedImage.resizeWith(width: 1280)
+//        }
     }
     
     private func applyWatermarkIfNeed(_ image: UIImage) -> UIImage {
@@ -38,7 +41,7 @@ class PHImage {
             print("areaSize width: \(image.size.width)")
             print("areaSize height: \(image.size.height)")
             let areaSize = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
-            UIGraphicsBeginImageContextWithOptions(areaSize.size , false, 0.0)
+            UIGraphicsBeginImageContext(areaSize.size)
             print("areaSize: \(areaSize.size)")
             image.draw(in: areaSize)
             ImageManager.sharedInstance.waterMarkImage!.draw(in: areaSize, blendMode: .normal, alpha: 1.0)
@@ -51,24 +54,6 @@ class PHImage {
             return image
         }
     }
-    
-    
-//    private func drawFrame(_ image: UIImage) -> UIImage
-//    {
-//        var bottomImage  = UIImage(cgImage: ImageManager.sharedInstance.waterMarkImage?.cgImage)
-//        var topImage = image!
-//        
-//        var size = CGSize(width: 300, height: 300)
-//        UIGraphicsBeginImageContext(size)
-//        
-//        let areaSize = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-//        bottomImage!.drawInRect(areaSize)
-//        
-//        topImage!.drawInRect(areaSize, blendMode: kCGBlendModeNormal, alpha: 0.8)
-//        
-//        var newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//    }
 }
 
 extension UIImage {

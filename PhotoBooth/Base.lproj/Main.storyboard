@@ -21,9 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="iyx-wW-5Xj" userLabel="Background Image View">
-                                <rect key="frame" x="0.0" y="35" width="768" height="989"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="iyx-wW-5Xj" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackframe" translatesAutoresizingMaskIntoConstraints="NO" id="WTc-rK-Zsg">
                                 <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
@@ -60,8 +59,8 @@
                                     <action selector="startTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1X-j9-oNN"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoP-Ex-QFb">
-                                <rect key="frame" x="315" y="298" width="139" height="189"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoP-Ex-QFb">
+                                <rect key="frame" x="348.5" y="359.5" width="72.5" height="151.5"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="130"/>
                                 <color key="textColor" red="1" green="0.72941176470588232" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="0.72941176470588232" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,6 +83,7 @@
                             <constraint firstItem="37C-kc-9GG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="601-Gy-Tqa"/>
                             <constraint firstItem="KoP-Ex-QFb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.85" id="9WO-V2-xZn"/>
                             <constraint firstItem="WTc-rK-Zsg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CrP-bc-TSW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyx-wW-5Xj" secondAttribute="bottom" id="K4h-pd-aj0"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="top" secondItem="Lbo-i2-ZCx" secondAttribute="bottom" constant="8" id="Nwl-PZ-w6k"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SY6-MP-Xkz"/>
                             <constraint firstAttribute="trailing" secondItem="WTc-rK-Zsg" secondAttribute="trailing" id="Xmv-Uj-yge"/>
@@ -91,8 +91,11 @@
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="foR-EY-c4E"/>
                             <constraint firstItem="Lbo-i2-ZCx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8M-Ya-E8O"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WTc-rK-Zsg" secondAttribute="bottom" id="irb-uf-EQg"/>
+                            <constraint firstItem="iyx-wW-5Xj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lpR-8C-YEc"/>
                             <constraint firstItem="WTc-rK-Zsg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mjL-ix-hAb"/>
+                            <constraint firstAttribute="trailing" secondItem="iyx-wW-5Xj" secondAttribute="trailing" id="sU4-xh-9g6"/>
                             <constraint firstItem="KoP-Ex-QFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uao-9f-JgT"/>
+                            <constraint firstItem="iyx-wW-5Xj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yOi-aK-hH5"/>
                         </constraints>
                     </view>
                     <connections>
