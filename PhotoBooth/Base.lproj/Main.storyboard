@@ -65,9 +65,8 @@
                                 <color key="textColor" red="1" green="0.72941176470588232" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="0.72941176470588232" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrV-JA-jPR" userLabel="cameraSelectorButton">
-                                <rect key="frame" x="58" y="929" width="109" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrV-JA-jPR" userLabel="cameraSelectorButton">
+                                <rect key="frame" x="20" y="944" width="91" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Front">
                                     <color key="titleColor" red="0.94127523697970494" green="0.97697754105553247" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,6 +84,7 @@
                             <constraint firstItem="WTc-rK-Zsg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CrP-bc-TSW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyx-wW-5Xj" secondAttribute="bottom" id="K4h-pd-aj0"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="top" secondItem="Lbo-i2-ZCx" secondAttribute="bottom" constant="8" id="Nwl-PZ-w6k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YrV-JA-jPR" secondAttribute="bottom" constant="20" id="Pe8-tR-eJc"/>
                             <constraint firstItem="JXW-Um-XVV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SY6-MP-Xkz"/>
                             <constraint firstAttribute="trailing" secondItem="WTc-rK-Zsg" secondAttribute="trailing" id="Xmv-Uj-yge"/>
                             <constraint firstAttribute="trailing" secondItem="37C-kc-9GG" secondAttribute="trailing" constant="15" id="cJk-lP-eLe"/>
@@ -93,6 +93,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WTc-rK-Zsg" secondAttribute="bottom" id="irb-uf-EQg"/>
                             <constraint firstItem="iyx-wW-5Xj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lpR-8C-YEc"/>
                             <constraint firstItem="WTc-rK-Zsg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mjL-ix-hAb"/>
+                            <constraint firstItem="YrV-JA-jPR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qYH-fB-nYr"/>
                             <constraint firstAttribute="trailing" secondItem="iyx-wW-5Xj" secondAttribute="trailing" id="sU4-xh-9g6"/>
                             <constraint firstItem="KoP-Ex-QFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uao-9f-JgT"/>
                             <constraint firstItem="iyx-wW-5Xj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yOi-aK-hH5"/>
