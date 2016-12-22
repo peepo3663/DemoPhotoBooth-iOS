@@ -279,7 +279,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                     }
                 }
             }
-        }, exactSeenImage: true)
+        })
     }
     
     func saveImageToPhotosAlbum() {
