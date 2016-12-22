@@ -39,7 +39,7 @@ class PHImage {
             print("areaSize width: \(image.size.width)")
             print("areaSize height: \(image.size.height)")
             let areaSize = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
-            UIGraphicsBeginImageContextWithOptions(areaSize.size , false, 0.0)
+            UIGraphicsBeginImageContext(areaSize.size)
             print("areaSize: \(areaSize.size)")
             image.draw(in: areaSize)
             ImageManager.sharedInstance.waterMarkImage!.draw(in: areaSize, blendMode: .normal, alpha: 1.0)
