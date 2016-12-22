@@ -98,7 +98,6 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         self.myTimer?.invalidate()
         self.myTimer = nil
         self.hud?.dismiss()
-        self.hud = nil
         self.removeAllImages()
         self.resetUICamera()
         self.finishLabel.isHidden = true
@@ -243,16 +242,12 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                 //no error
                 if let imageRaw = image {
                     //Resize before append to watermardks (frame)
-                    if cameraSetting == "Rear"
-                    {
+                    if cameraSetting == "Rear" {
                         let cropImageTop = self.cropTopImage(image: imageRaw)
-//                        let cropImageBottom = self.cropBottomImage(image: cropImageTop)
                         let phImage = PHImage(image: cropImageTop)
                         self.imageToUploads.append(phImage)
                         print("PHImage after resizing: \(phImage.adjustedImage.size)")
-                    }
-                    else
-                    {
+                    } else {
                         let cropImage = self.cropBottomImage(image: imageRaw)
                         let phImage = PHImage(image: cropImage)
                         self.imageToUploads.append(phImage)
@@ -268,8 +263,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                         self.countdownLabel.text = "5"
                         self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector:
                             #selector(self.updateLabel(timer:)), userInfo: nil, repeats: false)
-                    }
-                    else {
+                    } else {
                         // 5 images upload and reset
                         self.hud?.show(in: self.view)
                         var settings = RenderSettings()
