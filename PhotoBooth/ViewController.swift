@@ -37,17 +37,11 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     private var myTimer: Timer?
     private var time = 5
     private var imageToUploads: [PHImage] = []
-
-    
     private var path: String!
     
-//    private var requestsManager: GRRequestsManager!
     private var webpEncoder: YYImageEncoder!
-//    private var videoRequest: GRDataExchangeRequestProtocol?
-//    private var gifRequest: GRDataExchangeRequestProtocol?
     private var imagePickerViewController: UIImagePickerController?
     private var hud: JGProgressHUD?
-//    private var retry = 2
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -60,10 +54,6 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         self.removeAllImages()
         self.resetUICamera()
         self.imageToUploads.removeAll()
-//        if self.requestsManager != nil {
-//            self.requestsManager.stopAndCancelAllRequests()
-//            self.requestsManager = nil
-//        }
         if webpEncoder != nil {
             self.webpEncoder = nil
         }
@@ -176,8 +166,6 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                 if senderButton.titleLabel?.text == "Done" {
                     self.finishLabel.isHidden = true
                     self.startButton.setTitle("Start", for: .normal)
-//                    self.artworkTextTest.text = "img1"
-//                    self.artworkTextTest.isHidden = false
                     //show artwork
                 } else {
                     //restart
@@ -185,15 +173,14 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                     print(self.view.bounds)
                     print(self.topLayoutGuide.length)
                     screenRect.origin.y += self.topLayoutGuide.length
-                    //                let squareRect = CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.width)
+                    // let squareRect = CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.width)
                     attachCameraAndStart(shouldStart: true, rect: screenRect)
                     startButton.isHidden = true
-//                    artworkTextTest.isHidden = true
-                    //                pickedImageButton.isHidden = true
+                    // pickedImageButton.isHidden = true
                     backgroundImageView.isHidden = true
                     blackframeImageView.isHidden = false
                     cameraSelectorButton.isHidden = true
-//                    blackframeImageView.isHidden = true
+                    // blackframeImageView.isHidden = true
                     countdownLabel.isHidden = false
                     finishLabel.isHidden = true
                     self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateLabel(timer:)), userInfo: nil, repeats: false)
@@ -216,43 +203,39 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     
     func resetTimer() {
         // capture screen instead of take photo
-//        var image :UIImage = self.subView.capture()
-//                //no error
-//        let phImg = PHImage(image: image)
-//                    self.imageToUploads.append(phImg)
-//                    if self.imageToUploads.count < 5
-//                    {
-//                        // continue
-//                        self.time = 5
-//                        self.startButton.isHidden = true
-//                        //                        self.artworkTextTest.isHidden = true
-//                        //                        self.pickedImageButton.isHidden = true
-//                        self.blackframeImageView.isHidden = false
-//                        self.countdownLabel.isHidden = false
-//                        self.countdownLabel.text = "5"
-//                        self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector:
-//                            #selector(self.updateLabel(timer:)), userInfo: nil, repeats: false)
-//                    }
-//                    else
-//                    {
-//                        // 5 images upload and reset
-//                        self.hud?.show(in: self.view)
-//                        var settings = RenderSettings()
-//                        let firstImage = self.imageToUploads.first!
-//                        settings.width = firstImage.adjustedImage.size.width
-//                        settings.height = firstImage.adjustedImage.size.height
-//                        settings.fps = 2
-//                        let imageAnimator = ImageAnimator(renderSettings: settings, images: self.imageToUploads)
-//                        imageAnimator.render()
-//                        {
-//                                self.ftpUploadVideofile(imageAnimator: imageAnimator)
-//                        }
-//                    }
-    
-        
-        
-        
-        self.previewViewController?.capture({ (camera, image, metadata, error) in
+        // var image :UIImage = self.subView.capture()
+        //no error
+        // let phImg = PHImage(image: image)
+        // self.imageToUploads.append(phImg)
+        // if self.imageToUploads.count < 5
+        // {
+        // continue
+        // self.time = 5
+        // self.startButton.isHidden = true
+        // self.artworkTextTest.isHidden = true
+        // self.pickedImageButton.isHidden = true
+        // self.blackframeImageView.isHidden = false
+        // self.countdownLabel.isHidden = false
+        // self.countdownLabel.text = "5"
+        // self.myTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector:
+        // #selector(self.updateLabel(timer:)), userInfo: nil, repeats: false)
+        // }
+        // else
+        // {
+        // 5 images upload and reset
+        // self.hud?.show(in: self.view)
+        // var settings = RenderSettings()
+        // let firstImage = self.imageToUploads.first!
+        // settings.width = firstImage.adjustedImage.size.width
+        // settings.height = firstImage.adjustedImage.size.height
+        // settings.fps = 2
+        // let imageAnimator = ImageAnimator(renderSettings: settings, images: self.imageToUploads)
+        // imageAnimator.render()
+        // {
+        // self.ftpUploadVideofile(imageAnimator: imageAnimator)
+        // }
+        // }
+    self.previewViewController?.capture({ (camera, image, metadata, error) in
             if error != nil {
                 self.resetUICamera()
             } else {
@@ -293,7 +276,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                     }
                 }
             }
-        })
+        }, exactSeenImage: true)
     }
     
     func saveImageToPhotosAlbum() {
