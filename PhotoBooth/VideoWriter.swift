@@ -56,6 +56,8 @@ class VideoWriter {
         
         CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
         
+        UIGraphicsEndImageContext()
+        
         return pixelBuffer
     }
     
@@ -128,8 +130,7 @@ class VideoWriter {
                         completion()
                     }
                 }
-            }
-            else {
+            }  else {
                 // Fall through. The closure will be called again when the writer is ready.
             }
         }
