@@ -83,6 +83,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         {
             cameraSelectorButton.setTitle("Rear", for: UIControlState.normal)
             cameraSetting = "Rear"
+//            ImageManager.setWaterMarkImage(UIImage(named: "backframeHD.png"));
         }
         else if cameraSelectorButton.titleLabel?.text == "Rear"
         {
@@ -244,13 +245,27 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
                 //no error
                 if let imageRaw = image
                 {
-                    let cropImage = self.cropBottomImage(image: imageRaw)
-                    let phImage = PHImage(image: cropImage)
                     //Resize before append to watermardks (frame)
 //                    let phImage = PHImage(image: self.resizeImage(image: imageRaw, width:0 , height: 1280, isScale: true))
 //                    let phImage = PHImage(image: imageRaw.resizeWith(percentage: 0.3)!)
 //                    let phImage = PHImage(image: self.resizeImage(image: imageRaw, width:960 , height: 1280, isScale: false))
-                    self.imageToUploads.append(phImage)
+                    
+                    if cameraSetting == "Rear"
+                    {
+                        let cropImageTop = self.cropTopImage(image: imageRaw)
+//                        let cropImageBottom = self.cropBottomImage(image: cropImageTop)
+                        let phImage = PHImage(image: cropImageTop)
+                        self.imageToUploads.append(phImage)
+                        print("PHImage after resizing: \(phImage.adjustedImage.size)")
+                    }
+                    else
+                    {
+                        let cropImage = self.cropBottomImage(image: imageRaw)
+                        let phImage = PHImage(image: cropImage)
+                        self.imageToUploads.append(phImage)
+                    }
+                   
+                    
                     if self.imageToUploads.count < 5
                     {
                         // continue
@@ -469,7 +484,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
             else
             {
                 // Rear
-                self.previewViewController = LLSimpleCamera(quality: AVCaptureSessionPresetPhoto, position: LLCameraPositionRear, videoEnabled: false)
+                self.previewViewController = LLSimpleCamera(quality: AVCaptureSessionPreset1920x1080, position: LLCameraPositionRear, videoEnabled: false)
             }
             self.previewViewController?.fixOrientationAfterCapture = true
         }
@@ -657,9 +672,20 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
 //    self.imageView.image = capturedImage;
 //    }
     
+//    func cropBottomImage(image: UIImage) -> UIImage {
+//        let height = CGFloat(image.size.height / 4)
+//        let rect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height - height)
+//        return cropImage(image: image, toRect: rect)
+//    }
     func cropBottomImage(image: UIImage) -> UIImage {
-//        let height = CGFloat(image.size.height / 3)
-        let rect = CGRect(x: 0, y: 0, width: image.size.width, height: 1350)
+//        let height = CGFloat(image.size.height / 4)
+        let rect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height - 80)
+        return cropImage(image: image, toRect: rect)
+    }
+    
+    func cropTopImage(image: UIImage) -> UIImage {
+//        let height = CGFloat(image.size.height / 4)
+        let rect = CGRect(x: 0, y: 260, width: image.size.width, height: image.size.height - 640)
         return cropImage(image: image, toRect: rect)
     }
     
@@ -668,8 +694,6 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
         let croppedImage:UIImage = UIImage(cgImage:imageRef)
         return croppedImage
     }
-    
-    
 }
 extension UIView {
     

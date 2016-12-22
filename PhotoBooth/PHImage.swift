@@ -30,7 +30,7 @@ class PHImage {
         //TODO add watermark
         self.adjustedImage = self.applyWatermarkIfNeed(image)
 //        self.fixrotation(waterMarkImage)
-        
+//        self.adjustedImage = self.adjustedImage.resizeWith(percentage: 0.25)
     }
     
     private func applyWatermarkIfNeed(_ image: UIImage) -> UIImage {

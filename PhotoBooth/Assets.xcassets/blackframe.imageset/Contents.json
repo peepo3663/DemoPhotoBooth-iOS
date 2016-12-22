@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "ipad",
-      "filename" : "frame1350x1080.png",
+      "filename" : "blacklistframe1024x1280.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "frame1350x1080-1.png",
+      "filename" : "blacklistframe1024x1280-1.png",
       "scale" : "2x"
     },
     {

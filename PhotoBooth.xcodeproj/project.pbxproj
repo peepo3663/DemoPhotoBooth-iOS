@@ -383,7 +383,7 @@
 			baseConfigurationReference = 6D57E62FD13A62FC6CEF2DA5 /* Pods-PhotoBooth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 4U99SV73M8;
 				INFOPLIST_FILE = PhotoBooth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -391,8 +391,8 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.billionaireproject.PhotoBooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6edba9d4-d9e0-4118-85c5-f58569b13d1c";
-				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Development Provisioning";
+				PROVISIONING_PROFILE = "d822166b-47a0-469f-90ad-ac7b916964d0";
+				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Provisioning";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhotoBooth/PhotoBooth-Bridging.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -404,15 +404,15 @@
 			baseConfigurationReference = 017C6C091B937D3D25E503EA /* Pods-PhotoBooth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 4U99SV73M8;
 				INFOPLIST_FILE = PhotoBooth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.billionaireproject.PhotoBooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6edba9d4-d9e0-4118-85c5-f58569b13d1c";
-				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Development Provisioning";
+				PROVISIONING_PROFILE = "d822166b-47a0-469f-90ad-ac7b916964d0";
+				PROVISIONING_PROFILE_SPECIFIER = "PhotoBooth Provisioning";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhotoBooth/PhotoBooth-Bridging.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
