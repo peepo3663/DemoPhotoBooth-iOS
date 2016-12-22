@@ -462,8 +462,6 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
             return
         }
         if self.previewViewController == nil {
-            self.previewViewController?.cameraQuality = AVCaptureSessionPresetPhoto
-            
             // Front and rear camera
             if cameraSetting == "Front" {
                 // Front
