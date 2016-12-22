@@ -114,6 +114,7 @@ class ViewController: UIViewController, /*GRRequestsManagerDelegate*/UIImagePick
     }
     
     func applicationWillEnterForeground(_ notification: Notification) {
+        // from the background to the active state
         // relabel start
         self.startButton.setTitle("Start", for: .normal)
     }
